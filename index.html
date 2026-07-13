@@ -114,16 +114,30 @@
 
   <!-- ========== HERO BANNER ========== -->
   <section class="hero-section">
-    <div class="container hero-section__inner">
-      <div class="hero-banner">
-        <img class="hero-banner__img" src="images/hero-banner.jpg" alt="Đèn năng lượng mặt trời Phú Yên Solar">
+    <div class="hero-slider" id="heroSlider">
+      <div class="hero-slider__track" id="heroTrack">
+        <div class="hero-slide">
+          <img src="images/hero-banner.jpg" alt="Đèn năng lượng mặt trời Phú Yên Solar">
+        </div>
+        <div class="hero-slide">
+          <img src="images/projects/project-1.jpg" alt="Dự án chiếu sáng biệt thự Phú Yên Solar">
+        </div>
+        <div class="hero-slide">
+          <img src="images/projects/project-2.jpg" alt="Dự án đèn nhà xưởng Phú Yên Solar">
+        </div>
       </div>
+      <button type="button" class="hero-slider__btn hero-slider__btn--prev" aria-label="Ảnh trước"><i class="fa-solid fa-chevron-left"></i></button>
+      <button type="button" class="hero-slider__btn hero-slider__btn--next" aria-label="Ảnh sau"><i class="fa-solid fa-chevron-right"></i></button>
+      <div class="hero-slider__dots" id="heroDots"></div>
     </div>
   </section>
 
   <!-- ========== TRUST BAR ========== -->
   <section class="trust-bar">
-    <div class="container trust-bar__inner">
+    <div class="container">
+      <div class="trust-slider">
+        <button type="button" class="trust-slider__btn trust-slider__btn--prev" aria-label="Trước"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="trust-bar__inner trust-slider__viewport" id="trustSlider">
       <div class="trust-item">
         <div class="trust-item__icon"><i class="fa-solid fa-truck-fast"></i></div>
         <div>
@@ -159,11 +173,13 @@
           <span>Nhanh chóng – Chuyên nghiệp</span>
         </div>
       </div>
+        </div>
+        <button type="button" class="trust-slider__btn trust-slider__btn--next" aria-label="Sau"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
     </div>
   </section>
 
   <!-- ========== FLASH SALE ========== -->
-  <section class="product-section product-section--flash">
     <div class="container">
       <div class="section-header section-header--center">
         <div class="section-header__title">
@@ -185,7 +201,7 @@
         <a href="pages/danh-muc.html?cat=den-pha-nlmt" class="section-header__link">Xem tất cả <i class="fa-solid fa-chevron-right"></i></a>
       </div>
 
-      <div class="product-grid">
+      <div class="product-grid" id="flashGrid">
         <article class="product-card">
           <span class="product-card__badge product-card__badge--sale">-36%</span>
           <a href="pages/chi-tiet.html?id=den-pha-nlmt-cp03-sl-rad-200w" class="product-card__image">
@@ -291,7 +307,14 @@
         </article>
       </div>
 
-      <div class="section-footer">
+      <div class="grid-pagination" id="flashPagination">
+        <button type="button" class="grid-pagination__btn is-active" data-page="1">1</button>
+        <button type="button" class="grid-pagination__btn" data-page="2">2</button>
+        <button type="button" class="grid-pagination__btn" data-page="3">3</button>
+        <a href="pages/danh-muc.html?cat=den-pha-nlmt" class="grid-pagination__all">Xem tất cả <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="section-footer section-footer--desktop">
         <a href="pages/danh-muc.html?cat=den-pha-nlmt" class="btn-section-more">XEM TẤT CẢ FLASHSALE <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
@@ -308,7 +331,7 @@
         <a href="pages/danh-muc.html?cat=den-pha-nlmt" class="section-header__link">Xem tất cả <i class="fa-solid fa-chevron-right"></i></a>
       </div>
 
-      <div class="product-grid product-grid--bestseller">
+      <div class="product-grid product-grid--bestseller" id="bestsellerGrid">
         <article class="product-card product-card--bestseller">
           <span class="product-card__badge product-card__badge--top">TOP 1</span>
           <a href="pages/chi-tiet.html?id=den-pha-nlmt-cp03-sl-rad-300w" class="product-card__image">
@@ -410,7 +433,14 @@
         </article>
       </div>
 
-      <div class="section-footer">
+      <div class="grid-pagination" id="bestsellerPagination">
+        <button type="button" class="grid-pagination__btn is-active" data-page="1">1</button>
+        <button type="button" class="grid-pagination__btn" data-page="2">2</button>
+        <button type="button" class="grid-pagination__btn" data-page="3">3</button>
+        <a href="pages/danh-muc.html?cat=den-pha-nlmt" class="grid-pagination__all">Xem tất cả <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="section-footer section-footer--desktop">
         <a href="pages/danh-muc.html?cat=den-pha-nlmt" class="btn-section-more">XEM TẤT CẢ SẢN PHẨM BÁN CHẠY <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
@@ -693,11 +723,6 @@
           <div class="ready-promo__visual">
             <img src="images/projects/project-1.jpg" alt="Biệt thự chiếu sáng bằng đèn NLMT Phú Yên Solar" class="ready-promo__bg">
             <div class="ready-promo__visual-overlay" aria-hidden="true"></div>
-            <div class="ready-promo__badges">
-              <span class="ready-promo__badge ready-promo__badge--sale"><i class="fa-solid fa-gift"></i> Khuyến mãi</span>
-              <span class="ready-promo__badge ready-promo__badge--flash"><i class="fa-solid fa-bolt"></i> Flash Sale</span>
-            </div>
-            <img src="images/products/pha-300w.png" alt="Đèn pha NLMT Phú Yên Solar 300W" class="ready-promo__product">
           </div>
           <div class="ready-promo__content">
             <span class="ready-promo__label">GIẢI PHÁP NLMT HÀNG ĐẦU</span>
