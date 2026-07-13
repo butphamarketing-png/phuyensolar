@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phú Yên Solar – Đèn Năng Lượng Mặt Trời Cao Cấp</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="is-loading">
+
+  <!-- ========== LOADING ========== -->
+  <div id="pageLoader" class="page-loader" aria-hidden="false">
+    <div class="page-loader__bg" aria-hidden="true">
+      <div class="page-loader__sun"></div>
+      <div class="page-loader__rays"></div>
+      <div class="page-loader__halo"></div>
+    </div>
+    <div class="page-loader__inner">
+      <div class="page-loader__logo-wrap">
+        <div class="page-loader__logo-glow" aria-hidden="true"></div>
+        <img src="images/logo-icon.png" alt="" class="page-loader__logo" width="168" height="168">
+      </div>
+      <p class="page-loader__brand">Phú Yên <span>Solar</span></p>
+      <div class="page-loader__bar" role="progressbar" aria-label="Đang tải">
+        <span class="page-loader__bar-fill"></span>
+      </div>
+      <p class="page-loader__slogan">Năng lượng bền vững – Thịnh vượng bền vững</p>
+    </div>
+  </div>
+
+  <!-- ========== HEADER TOP ========== -->
+  <header class="header-top">
+    <div class="container header-top__inner">
+      <a href="https://phuyensolar.com" class="logo">
+        <img src="images/logo-icon.png" alt="" class="logo__img" width="56" height="56">
+        <div class="logo__text">
+          <span class="logo__name">Phú Yên <span class="logo__accent">Solar</span></span>
+          <span class="logo__tagline">Năng lượng bền vững – Thịnh vượng bền vững</span>
+        </div>
+      </a>
+
+      <form class="search-bar" action="#" role="search">
+        <input type="search" placeholder="Tìm kiếm sản phẩm..." aria-label="Tìm kiếm sản phẩm">
+        <button type="submit" aria-label="Tìm kiếm"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+
+      <div class="header-utils">
+        <div class="hotline">
+          <i class="fa-solid fa-phone-volume"></i>
+          <div>
+            <span class="hotline__label">Hotline tư vấn:</span>
+            <a href="tel:0907673277" class="hotline__number">090 767 32 77</a>
+            <span class="hotline__hours">(8:00 - 22:00)</span>
+          </div>
+        </div>
+
+        <a href="#" class="util-item">
+          <span class="util-item__icon"><i class="fa-solid fa-cart-shopping"></i><span class="badge">0</span></span>
+          <span>Giỏ hàng</span>
+        </a>
+
+        <a href="#bao-gia" class="btn btn--primary btn--quote">
+          <i class="fa-solid fa-file-lines"></i> NHẬN BÁO GIÁ
+        </a>
+      </div>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Mở menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="nav-bar">
+    <div class="container nav-bar__inner">
+      <div class="category-dropdown" id="categoryDropdown">
+        <button class="nav-categories" id="categoryToggle" aria-expanded="false" aria-haspopup="true">
+          <i class="fa-solid fa-bars"></i>
+          DANH MỤC SẢN PHẨM
+          <i class="fa-solid fa-chevron-down nav-categories__arrow"></i>
+        </button>
+
+        <aside class="category-sidebar" id="categorySidebar">
+          <ul class="category-list">
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-lightbulb"></i>
+                <span>Đèn pha năng lượng mặt trời</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-road"></i>
+                <span>Đèn đường năng lượng mặt trời</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-seedling"></i>
+                <span>Đèn sân vườn năng lượng mặt trời</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-monument"></i>
+                <span>Đèn trụ năng lượng mặt trời</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-house-chimney"></i>
+                <span>Đèn tường năng lượng mặt trời</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-bolt"></i>
+                <span>Đèn cảm biến năng lượng mặt trời</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-star"></i>
+                <span>Đèn trang trí năng lượng mặt trời</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-industry"></i>
+                <span>Đèn nhà xưởng năng lượng mặt trời</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-battery-full"></i>
+                <span>Pin năng lượng mặt trời</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <span>Phụ kiện lắp đặt</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+
+      <ul class="nav-menu">
+        <li><a href="#" class="active">Trang chủ</a></li>
+        <li><a href="#">Giới thiệu</a></li>
+        <li class="has-dropdown">
+          <a href="#">Sản phẩm <i class="fa-solid fa-chevron-down"></i></a>
+        </li>
+        <li><a href="#">Dự án</a></li>
+        <li><a href="#">Tin tức</a></li>
+        <li><a href="#">Khuyến mãi</a></li>
+        <li><a href="#">Chính sách</a></li>
+        <li><a href="#">Liên hệ</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ========== HERO BANNER ========== -->
+  <section class="hero-section">
+    <div class="container hero-section__inner">
+      <div class="hero-banner">
+        <img class="hero-banner__img" src="images/hero-banner.jpg" alt="Đèn năng lượng mặt trời Phú Yên Solar">
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TRUST BAR ========== -->
+  <section class="trust-bar">
+    <div class="container trust-bar__inner">
+      <div class="trust-item">
+        <div class="trust-item__icon"><i class="fa-solid fa-truck-fast"></i></div>
+        <div>
+          <strong>MIỄN PHÍ VẬN CHUYỂN</strong>
+          <span>Toàn quốc</span>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-item__icon"><i class="fa-solid fa-rotate-left"></i></div>
+        <div>
+          <strong>ĐỔI TRẢ DỄ DÀNG</strong>
+          <span>Trong 30 ngày</span>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-item__icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <div>
+          <strong>THANH TOÁN AN TOÀN</strong>
+          <span>Nhiều hình thức</span>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-item__icon"><i class="fa-solid fa-headset"></i></div>
+        <div>
+          <strong>HỖ TRỢ 24/7</strong>
+          <span>090 767 32 77</span>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-item__icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+        <div>
+          <strong>LẮP ĐẶT TẬN NƠI</strong>
+          <span>Nhanh chóng – Chuyên nghiệp</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FLASH SALE ========== -->
+  <section class="product-section product-section--flash">
+    <div class="container">
+      <div class="section-header section-header--center">
+        <div class="section-header__title">
+          <span class="section-header__icon section-header__icon--flash"><i class="fa-solid fa-fire-flame-curved flame-burning"></i></span>
+          <h2>FLASH<strong>SALE</strong> – GIÁ SỐC HÔM NAY</h2>
+        </div>
+        <div class="countdown" id="flashCountdown">
+          <span class="countdown__label">Kết thúc sau:</span>
+          <div class="countdown__timer">
+            <div class="countdown__item"><span class="countdown__num" data-unit="days">00</span><span class="countdown__unit">Ngày</span></div>
+            <span class="countdown__sep">:</span>
+            <div class="countdown__item"><span class="countdown__num" data-unit="hours">00</span><span class="countdown__unit">Giờ</span></div>
+            <span class="countdown__sep">:</span>
+            <div class="countdown__item"><span class="countdown__num" data-unit="minutes">00</span><span class="countdown__unit">Phút</span></div>
+            <span class="countdown__sep">:</span>
+            <div class="countdown__item"><span class="countdown__num" data-unit="seconds">00</span><span class="countdown__unit">Giây</span></div>
+          </div>
+        </div>
+        <a href="#" class="section-header__link">Xem tất cả <i class="fa-solid fa-chevron-right"></i></a>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card">
+          <span class="product-card__badge product-card__badge--sale">-36%</span>
+          <a href="#" class="product-card__image">
+            <img src="images/products/pha-200w.jpg" alt="Đèn Pha Phú Yên Solar 200W">
+            <span class="product-card__power">200W</span>
+          </a>
+          <h3 class="product-card__title"><a href="#">Đèn Pha Năng Lượng Mặt Trời Phú Yên Solar 200W</a></h3>
+          <ul class="product-card__specs">
+            <li><i class="fa-solid fa-bolt"></i> 200W</li>
+            <li><i class="fa-solid fa-sun"></i> 2500lm</li>
+            <li><i class="fa-solid fa-battery-full"></i> Pin 20.000mAh</li>
+          </ul>
+          <div class="product-card__price">
+            <span class="price-current">1.290.000đ</span>
+            <span class="price-old">2.000.000đ</span>
+          </div>
+          <div class="product-card__meta">
+            <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+            <span class="sold">Đã bán 1.256</span>
+          </div>
+          <div class="product-card__actions">
+            <button type="button" class="btn-icon-cart" aria-label="Thêm vào giỏ"><i class="fa-solid fa-cart-shopping"></i></button>
+            <button type="button" class="btn-add-cart">THÊM VÀO GIỎ</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <span class="product-card__badge product-card__badge--sale">-33%</span>
+          <a href="#" class="product-card__image">
+            <img src="images/products/duong-150w.jpg" alt="Đèn Đường All In One 150W">
+            <span class="product-card__power">150W</span>
+          </a>
+          <h3 class="product-card__title"><a href="#">Đèn Đường NLMT All In One 150W</a></h3>
+          <ul class="product-card__specs">
+            <li><i class="fa-solid fa-bolt"></i> 150W</li>
+            <li><i class="fa-solid fa-sun"></i> 1800lm</li>
+            <li><i class="fa-solid fa-battery-full"></i> Pin 15.000mAh</li>
+          </ul>
+          <div class="product-card__price">
+            <span class="price-current">2.990.000đ</span>
+            <span class="price-old">4.500.000đ</span>
+          </div>
+          <div class="product-card__meta">
+            <span class="rating"><i class="fa-solid fa-star"></i> 4.8</span>
+            <span class="sold">Đã bán 892</span>
+          </div>
+          <div class="product-card__actions">
+            <button type="button" class="btn-icon-cart" aria-label="Thêm vào giỏ"><i class="fa-solid fa-cart-shopping"></i></button>
+            <button type="button" class="btn-add-cart">THÊM VÀO GIỎ</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <span class="product-card__badge product-card__badge--sale">-29%</span>
+          <a href="#" class="product-card__image">
+            <img src="images/products/cam-bien-100w.jpg" alt="Đèn Pha Cảm Biến 100W">
+            <span class="product-card__power">100W</span>
+          </a>
+          <h3 class="product-card__title"><a href="#">Đèn Pha Cảm Biến Chuyển Động 100W</a></h3>
+          <ul class="product-card__specs">
+            <li><i class="fa-solid fa-bolt"></i> 100W</li>
+            <li><i class="fa-solid fa-sun"></i> 1200lm</li>
+            <li><i class="fa-solid fa-battery-full"></i> Pin 10.000mAh</li>
+          </ul>
+          <div class="product-card__price">
+            <span class="price-current">890.000đ</span>
+            <span class="price-old">1.250.000đ</span>
+          </div>
+          <div class="product-card__meta">
+            <span class="rating"><i class="fa-solid fa-star"></i> 4.7</span>
+            <span class="sold">Đã bán 643</span>
+          </div>
+          <div class="product-card__actions">
+            <button type="button" class="btn-icon-cart" aria-label="Thêm vào giỏ"><i class="fa-solid fa-cart-shopping"></i></button>
+            <button type="button" class="btn-add-cart">THÊM VÀO GIỎ</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <span class="product-card__badge product-card__badge--sale">-35%</span>
+          <a href="#" class="product-card__image">
+            <img src="images/products/lien-cot-80w.jpg" alt="Đèn Đường Liền Cột 80W">
+            <span class="product-card__power">80W</span>
+          </a>
+          <h3 class="product-card__title"><a href="#">Đèn Đường Liền Cột 80W</a></h3>
+          <ul class="product-card__specs">
+            <li><i class="fa-solid fa-bolt"></i> 80W</li>
+            <li><i class="fa-solid fa-sun"></i> 1000lm</li>
+            <li><i class="fa-solid fa-battery-full"></i> Pin 12.000mAh</li>
+          </ul>
+          <div class="product-card__price">
+            <span class="price-current">1.590.000đ</span>
+            <span class="price-old">2.450.000đ</span>
+          </div>
+          <div class="product-card__meta">
+            <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+            <span class="sold">Đã bán 421</span>
+          </div>
+          <div class="product-card__actions">
+            <button type="button" class="btn-icon-cart" aria-label="Thêm vào giỏ"><i class="fa-solid fa-cart-shopping"></i></button>
+            <button type="button" class="btn-add-cart">THÊM VÀO GIỎ</button>
+          </div>
+        </article>
+      </div>
+
+      <div class="section-footer">
+        <a href="#" class="btn-section-more">XEM TẤT CẢ FLASHSALE <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SẢN PHẨM BÁN CHẠY ========== -->
+  <section class="product-section product-section--bestseller">
+    <div class="container">
+      <div class="section-header section-header--center section-header--simple">
+        <div class="section-header__title">
+          <span class="section-header__icon section-header__icon--fire"><i class="fa-solid fa-fire-flame-curved flame-burning"></i></span>
+          <h2>SẢN PHẨM <strong>BÁN CHẠY</strong></h2>
+        </div>
+        <a href="#" class="section-header__link">Xem tất cả <i class="fa-solid fa-chevron-right"></i></a>
+      </div>
+
+      <div class="product-grid product-grid--bestseller">
+        <article class="product-card product-card--bestseller">
+          <span class="product-card__badge product-card__badge--top">TOP 1</span>
+          <a href="#" class="product-card__image">
+            <img src="images/products/pha-300w.png" alt="Đèn Pha Phú Yên Solar Pro 300W">
+            <span class="product-card__power">300W</span>
+          </a>
+          <h3 class="product-card__title"><a href="#">Đèn Pha NLMT Phú Yên Solar Pro 300W Solar</a></h3>
+          <ul class="product-card__specs">
+            <li><i class="fa-solid fa-bolt"></i> 300W</li>
+            <li><i class="fa-solid fa-sun"></i> 3500lm</li>
+            <li><i class="fa-solid fa-battery-full"></i> Pin 30.000mAh</li>
+          </ul>
+          <div class="product-card__price">
+            <span class="price-current">1.890.000đ</span>
+          </div>
+          <div class="product-card__meta">
+            <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+            <span class="sold">Đã bán 2.341</span>
+          </div>
+          <div class="product-card__actions">
+            <button type="button" class="btn-icon-cart" aria-label="Thêm vào giỏ"><i class="fa-solid fa-cart-shopping"></i></button>
+            <button type="button" class="btn-add-cart">THÊM VÀO GIỎ</button>
+          </div>
+        </article>
+
+        <article class="product-card product-card--bestseller">
+          <span class="product-card__badge product-card__badge--top">TOP 2</span>
+          <a href="#" class="product-card__image">
+            <img src="images/products/duong-600w.png" alt="Đèn Đường Liền Thân 600W">
+            <span class="product-card__power">600W</span>
+          </a>
+          <h3 class="product-card__title"><a href="#">Đèn Đường Liền Thân 600W</a></h3>
+          <ul class="product-card__specs">
+            <li><i class="fa-solid fa-bolt"></i> 600W</li>
+            <li><i class="fa-solid fa-sun"></i> 6000lm</li>
+            <li><i class="fa-solid fa-battery-full"></i> Pin 50.000mAh</li>
+          </ul>
+          <div class="product-card__price">
+            <span class="price-current">5.990.000đ</span>
+          </div>
+          <div class="product-card__meta">
+            <span class="rating"><i class="fa-solid fa-star"></i> 5.0</span>
+            <span class="sold">Đã bán 1.876</span>
+          </div>
+          <div class="product-card__actions">
+            <button type="button" class="btn-icon-cart" aria-label="Thêm vào giỏ"><i class="fa-solid fa-cart-shopping"></i></button>
+            <button type="button" class="btn-add-cart">THÊM VÀO GIỎ</button>
+          </div>
+        </article>
+
+        <article class="product-card product-card--bestseller">
+          <span class="product-card__badge product-card__badge--top">TOP 3</span>
+          <a href="#" class="product-card__image">
+            <img src="images/products/pha-400w.jpg" alt="Đèn Pha Cao Áp 400W">
+            <span class="product-card__power">400W</span>
+          </a>
+          <h3 class="product-card__title"><a href="#">Đèn Pha Cao Áp 400W IP67</a></h3>
+          <ul class="product-card__specs">
+            <li><i class="fa-solid fa-bolt"></i> 400W</li>
+            <li><i class="fa-solid fa-sun"></i> 4500lm</li>
+            <li><i class="fa-solid fa-battery-full"></i> Pin 40.000mAh</li>
+          </ul>
+          <div class="product-card__price">
+            <span class="price-current">3.290.000đ</span>
+          </div>
+          <div class="product-card__meta">
+            <span class="rating"><i class="fa-solid fa-star"></i> 4.8</span>
+            <span class="sold">Đã bán 1.234</span>
+          </div>
+          <div class="product-card__actions">
+            <button type="button" class="btn-icon-cart" aria-label="Thêm vào giỏ"><i class="fa-solid fa-cart-shopping"></i></button>
+            <button type="button" class="btn-add-cart">THÊM VÀO GIỎ</button>
+          </div>
+        </article>
+
+        <article class="product-card product-card--bestseller">
+          <span class="product-card__badge product-card__badge--top product-card__badge--top-blue">TOP 4</span>
+          <a href="#" class="product-card__image">
+            <img src="images/products/tru-50w.jpg" alt="Đèn Trụ Sân Vườn 50W">
+            <span class="product-card__power">50W</span>
+          </a>
+          <h3 class="product-card__title"><a href="#">Đèn Trụ Sân Vườn NLMT 50W</a></h3>
+          <ul class="product-card__specs">
+            <li><i class="fa-solid fa-bolt"></i> 50W</li>
+            <li><i class="fa-solid fa-sun"></i> 600lm</li>
+            <li><i class="fa-solid fa-battery-full"></i> Pin 8.000mAh</li>
+          </ul>
+          <div class="product-card__price">
+            <span class="price-current">750.000đ</span>
+          </div>
+          <div class="product-card__meta">
+            <span class="rating"><i class="fa-solid fa-star"></i> 4.7</span>
+            <span class="sold">Đã bán 987</span>
+          </div>
+          <div class="product-card__actions">
+            <button type="button" class="btn-icon-cart" aria-label="Thêm vào giỏ"><i class="fa-solid fa-cart-shopping"></i></button>
+            <button type="button" class="btn-add-cart">THÊM VÀO GIỎ</button>
+          </div>
+        </article>
+      </div>
+
+      <div class="section-footer">
+        <a href="#" class="btn-section-more">XEM TẤT CẢ SẢN PHẨM BÁN CHẠY <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DANH MỤC SẢN PHẨM ========== -->
+  <section class="category-section">
+    <div class="container">
+      <div class="section-header section-header--center section-header--simple">
+        <div class="section-header__title">
+          <span class="section-header__icon section-header__icon--grid"><i class="fa-solid fa-grip"></i></span>
+          <h2>DANH MỤC <strong>SẢN PHẨM</strong></h2>
+        </div>
+      </div>
+      <div class="category-grid">
+        <a href="#" class="category-card">
+          <div class="category-card__icon"><i class="fa-solid fa-lightbulb"></i></div>
+          <span>Đèn pha NLMT</span>
+          <small>128 sản phẩm</small>
+        </a>
+        <a href="#" class="category-card">
+          <div class="category-card__icon"><i class="fa-solid fa-road"></i></div>
+          <span>Đèn đường NLMT</span>
+          <small>96 sản phẩm</small>
+        </a>
+        <a href="#" class="category-card">
+          <div class="category-card__icon"><i class="fa-solid fa-seedling"></i></div>
+          <span>Đèn sân vườn</span>
+          <small>74 sản phẩm</small>
+        </a>
+        <a href="#" class="category-card">
+          <div class="category-card__icon"><i class="fa-solid fa-monument"></i></div>
+          <span>Đèn trụ NLMT</span>
+          <small>52 sản phẩm</small>
+        </a>
+        <a href="#" class="category-card">
+          <div class="category-card__icon"><i class="fa-solid fa-house-chimney"></i></div>
+          <span>Đèn tường NLMT</span>
+          <small>45 sản phẩm</small>
+        </a>
+        <a href="#" class="category-card">
+          <div class="category-card__icon"><i class="fa-solid fa-bolt"></i></div>
+          <span>Đèn cảm biến</span>
+          <small>38 sản phẩm</small>
+        </a>
+        <a href="#" class="category-card">
+          <div class="category-card__icon"><i class="fa-solid fa-industry"></i></div>
+          <span>Đèn nhà xưởng</span>
+          <small>31 sản phẩm</small>
+        </a>
+        <a href="#" class="category-card">
+          <div class="category-card__icon"><i class="fa-solid fa-battery-full"></i></div>
+          <span>Pin NLMT</span>
+          <small>24 sản phẩm</small>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== VÌ SAO CHỌN PHÚ YÊN SOLAR ========== -->
+  <section class="why-section">
+    <div class="container">
+      <div class="why-section__header">
+        <h2>VÌ SAO CHỌN <span>PHÚ YÊN SOLAR</span>?</h2>
+        <p>Giải pháp chiếu sáng năng lượng mặt trời hàng đầu Việt Nam</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-card__icon"><i class="fa-solid fa-certificate"></i></div>
+          <h3>Chất lượng cao cấp</h3>
+          <p>Chip LED Bridgelux, pin LiFePO4 bền bỉ, chuẩn IP67 chống nước bụi</p>
+        </div>
+        <div class="why-card">
+          <div class="why-card__icon"><i class="fa-solid fa-leaf"></i></div>
+          <h3>Tiết kiệm 100% điện</h3>
+          <p>Không tốn điện lưới, tự sạc ban ngày – sáng suốt đêm, hoàn vốn nhanh</p>
+        </div>
+        <div class="why-card">
+          <div class="why-card__icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+          <h3>Lắp đặt tận nơi</h3>
+          <p>Đội kỹ thuật chuyên nghiệp, khảo sát – thi công – bảo hành trọn gói</p>
+        </div>
+        <div class="why-card">
+          <div class="why-card__icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>Bảo hành lên đến 3 năm</h3>
+          <p>Cam kết đổi mới 1-đổi-1, hỗ trợ kỹ thuật 24/7 toàn quốc</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DỰ ÁN TIÊU BIỂU ========== -->
+  <section class="project-section">
+    <div class="container">
+      <div class="section-header section-header--center section-header--simple">
+        <div class="section-header__title">
+          <span class="section-header__icon section-header__icon--project"><i class="fa-solid fa-building"></i></span>
+          <h2>DỰ ÁN <strong>TIÊU BIỂU</strong></h2>
+        </div>
+        <a href="#" class="section-header__link">Xem tất cả <i class="fa-solid fa-chevron-right"></i></a>
+      </div>
+      <div class="project-grid">
+        <a href="#" class="project-card">
+          <img src="images/projects/project-1.jpg" alt="Dự án biệt thự">
+          <div class="project-card__overlay">
+            <span class="project-card__tag">Biệt thự</span>
+            <h3>Chiếu sáng sân vườn biệt thự Vinhomes</h3>
+            <p>Hà Nội · 120 đèn pha + 45 đèn sân vườn</p>
+          </div>
+        </a>
+        <a href="#" class="project-card">
+          <img src="images/projects/project-2.jpg" alt="Dự án khu công nghiệp">
+          <div class="project-card__overlay">
+            <span class="project-card__tag">Nhà xưởng</span>
+            <h3>Hệ thống đèn nhà xưởng 5000m²</h3>
+            <p>Bình Dương · 200 đèn nhà xưởng 200W</p>
+          </div>
+        </a>
+        <a href="#" class="project-card">
+          <img src="images/projects/project-3.jpg" alt="Dự án đường phố">
+          <div class="project-card__overlay">
+            <span class="project-card__tag">Đường phố</span>
+            <h3>Chiếu sáng đường nội bộ khu đô thị</h3>
+            <p>Đà Nẵng · 350 đèn đường liền cột</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== KHÁCH HÀNG NÓI GÌ ========== -->
+  <section class="testimonial-section">
+    <div class="container">
+      <div class="testimonial-section__header">
+        <span class="testimonial-section__label">Đánh giá từ khách hàng</span>
+        <h2>KHÁCH HÀNG NÓI GÌ VỀ <span>CHÚNG TÔI</span></h2>
+        <p>Hơn 10.000+ khách hàng tin tưởng lựa chọn Phú Yên Solar trên toàn quốc</p>
+      </div>
+      <div class="testimonial-grid">
+        <article class="testimonial-card">
+          <div class="testimonial-card__stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-card__quote">"Lắp 8 đèn pha Phú Yên Solar 200W cho sân vườn biệt thự, sáng rất đều và đẹp. Đã dùng 6 tháng không cần bật điện lưới, tiết kiệm đáng kể. Đội lắp đặt chuyên nghiệp, bảo hành nhanh."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">NH</div>
+            <div>
+              <strong>Nguyễn Hoàng Minh</strong>
+              <span>Chủ biệt thự · Hà Nội</span>
+            </div>
+          </div>
+          <span class="testimonial-card__product"><i class="fa-solid fa-lightbulb"></i> Đèn Pha NLMT 200W</span>
+        </article>
+        <article class="testimonial-card">
+          <div class="testimonial-card__stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-card__quote">"Công ty chúng tôi lắp 150 đèn đường liền cột cho khu công nghiệp. Phú Yên Solar tư vấn kỹ, giá tốt, sản phẩm bền. Ban đêm chiếu sáng ổn định dù mùa mưa nhiều."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">LT</div>
+            <div>
+              <strong>Lê Thanh Tùng</strong>
+              <span>Giám đốc KCN · Bình Dương</span>
+            </div>
+          </div>
+          <span class="testimonial-card__product"><i class="fa-solid fa-road"></i> Đèn Đường Liền Cột 80W</span>
+        </article>
+        <article class="testimonial-card">
+          <div class="testimonial-card__stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-card__quote">"Mua online, giao hàng nhanh 2 ngày. Đèn cảm biến 100W rất tiện, có người đi qua mới sáng mạnh. Pin trâu, sáng cả đêm. Sẽ mua thêm cho sân sau."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">PT</div>
+            <div>
+              <strong>Phạm Thu Hà</strong>
+              <span>Hộ gia đình · Đà Nẵng</span>
+            </div>
+          </div>
+          <span class="testimonial-card__product"><i class="fa-solid fa-bolt"></i> Đèn Cảm Biến 100W</span>
+        </article>
+      </div>
+      <div class="testimonial-stats" id="testimonialStats">
+        <div class="testimonial-stat">
+          <strong><span class="stat-counter" data-value="4.9" data-decimals="1">0</span><span>/5</span></strong>
+          <span>Điểm đánh giá trung bình</span>
+        </div>
+        <div class="testimonial-stat">
+          <strong><span class="stat-counter" data-value="10000" data-separator="dot">0</span><span>+</span></strong>
+          <span>Khách hàng hài lòng</span>
+        </div>
+        <div class="testimonial-stat">
+          <strong><span class="stat-counter" data-value="98">0</span><span>%</span></strong>
+          <span>Tỷ lệ hài lòng dịch vụ</span>
+        </div>
+        <div class="testimonial-stat">
+          <strong><span class="stat-counter" data-value="3">0</span><span> năm</span></strong>
+          <span>Bảo hành chính hãng</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== XU HƯỚNG VÀ KIẾN THỨC ========== -->
+  <section class="trend-section">
+    <div class="container">
+      <div class="section-header section-header--center section-header--simple">
+        <div class="section-header__title">
+          <span class="section-header__icon section-header__icon--trend"><i class="fa-solid fa-book-open"></i></span>
+          <h2>XU HƯỚNG & <strong>KIẾN THỨC</strong></h2>
+        </div>
+        <a href="#" class="section-header__link">Xem tất cả <i class="fa-solid fa-chevron-right"></i></a>
+      </div>
+      <div class="trend-grid">
+        <article class="trend-card">
+          <a href="#" class="trend-card__image">
+            <img src="images/trends/trend-1.jpg" alt="Xu hướng pin LiFePO4">
+            <span class="trend-card__tag">Kiến thức</span>
+          </a>
+          <div class="trend-card__body">
+            <span class="trend-card__date"><i class="fa-regular fa-calendar"></i> 12/07/2026</span>
+            <h3><a href="#">Xu hướng đèn NLMT 2026: Công nghệ pin LiFePO4 thế hệ mới</a></h3>
+            <p>Tìm hiểu ưu điểm pin lithium iron phosphate so với pin acid truyền thống...</p>
+            <a href="#" class="trend-card__read">Đọc thêm <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+        <article class="trend-card">
+          <a href="#" class="trend-card__image">
+            <img src="images/trends/trend-2.jpg" alt="Đèn đường NLMT 2026">
+            <span class="trend-card__tag trend-card__tag--orange">Xu hướng</span>
+          </a>
+          <div class="trend-card__body">
+            <span class="trend-card__date"><i class="fa-regular fa-calendar"></i> 09/07/2026</span>
+            <h3><a href="#">5 mẫu đèn đường NLMT được ưa chuộng nhất năm 2026</a></h3>
+            <p>Top sản phẩm bán chạy với thiết kế liền thân, công suất cao và giá tốt...</p>
+            <a href="#" class="trend-card__read">Đọc thêm <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+        <article class="trend-card">
+          <a href="#" class="trend-card__image">
+            <img src="images/trends/trend-3.jpg" alt="Tính số đèn NLMT">
+            <span class="trend-card__tag">Hướng dẫn</span>
+          </a>
+          <div class="trend-card__body">
+            <span class="trend-card__date"><i class="fa-regular fa-calendar"></i> 06/07/2026</span>
+            <h3><a href="#">Cách tính số đèn NLMT cần thiết cho khu dân cư 500 hộ</a></h3>
+            <p>Công thức tính khoảng cách, công suất và dung lượng pin phù hợp...</p>
+            <a href="#" class="trend-card__read">Đọc thêm <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+        <article class="trend-card">
+          <a href="#" class="trend-card__image">
+            <img src="images/trends/trend-4.jpg" alt="Đèn NLMT thông minh IoT">
+            <span class="trend-card__tag trend-card__tag--orange">Xu hướng</span>
+          </a>
+          <div class="trend-card__body">
+            <span class="trend-card__date"><i class="fa-regular fa-calendar"></i> 03/07/2026</span>
+            <h3><a href="#">Đèn NLMT thông minh: Tích hợp IoT và điều khiển từ xa</a></h3>
+            <p>Giải pháp chiếu sáng thông minh giúp quản lý hệ thống hiệu quả hơn...</p>
+            <a href="#" class="trend-card__read">Đọc thêm <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+      <div class="section-footer">
+        <a href="#" class="btn-section-more">XEM TẤT CẢ BÀI VIẾT <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SẴN SÀNG NÂNG TẦM ========== -->
+  <section class="ready-section" id="bao-gia">
+    <div class="container">
+      <div class="ready-section__header">
+        <h2>SẴN SÀNG NÂNG TẦM HỆ THỐNG CHIẾU SÁNG?</h2>
+        <p>Liên hệ ngay để được đội ngũ chuyên gia tư vấn miễn phí và báo giá nhanh chóng.</p>
+      </div>
+
+      <div class="ready-section__box">
+        <div class="ready-promo">
+          <img src="images/ready-promo-banner.png" alt="Khuyến mãi đèn NLMT – Phú Yên Solar" class="ready-promo__full">
+        </div>
+
+        <div class="ready-links">
+          <a href="#" class="ready-link">
+            <span class="ready-link__icon ready-link__icon--facebook"><i class="fa-brands fa-facebook-f"></i></span>
+            <span class="ready-link__text">
+              <strong>Fanpage Facebook</strong>
+              <span>· Theo dõi để cập nhật tin tức &amp; ưu đãi mỗi ngày</span>
+            </span>
+            <i class="fa-solid fa-chevron-right ready-link__arrow"></i>
+          </a>
+          <a href="#" class="ready-link">
+            <span class="ready-link__icon ready-link__icon--messenger"><i class="fa-brands fa-facebook-messenger"></i></span>
+            <span class="ready-link__text">
+              <strong>Messenger</strong>
+              <span>· Chat trực tiếp với chuyên viên tư vấn</span>
+            </span>
+            <i class="fa-solid fa-chevron-right ready-link__arrow"></i>
+          </a>
+          <a href="#" class="ready-link">
+            <span class="ready-link__icon ready-link__icon--zalo"><span>Z</span></span>
+            <span class="ready-link__text">
+              <strong>Zalo</strong>
+              <span>· Nhắn tin nhanh – nhận báo giá trong 5 phút</span>
+            </span>
+            <i class="fa-solid fa-chevron-right ready-link__arrow"></i>
+          </a>
+          <a href="https://maps.google.com/?q=1402+Đại+lộ+Võ+Văn+Kiệt+Phường+Bình+Tiên+TP+Hồ+Chí+Minh" target="_blank" rel="noopener" class="ready-link">
+            <span class="ready-link__icon ready-link__icon--map"><i class="fa-solid fa-location-dot"></i></span>
+            <span class="ready-link__text">
+              <strong>Google Maps</strong>
+              <span>· 1402, Đại lộ Võ Văn Kiệt, Phường Bình Tiên, TP. HCM</span>
+            </span>
+            <i class="fa-solid fa-chevron-right ready-link__arrow"></i>
+          </a>
+          <a href="https://phuyensolar.com" target="_blank" rel="noopener" class="ready-link">
+            <span class="ready-link__icon ready-link__icon--web"><i class="fa-solid fa-globe"></i></span>
+            <span class="ready-link__text">
+              <strong>Website chính thức</strong>
+              <span>· Khám phá sản phẩm &amp; dự án tiêu biểu tại phuyensolar.com</span>
+            </span>
+            <i class="fa-solid fa-chevron-right ready-link__arrow"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="site-footer__top">
+      <div class="container site-footer__grid">
+        <div class="footer-col footer-col--brand">
+          <a href="https://phuyensolar.com" class="logo logo--footer">
+            <img src="images/logo-icon.png" alt="" class="logo__img logo__img--footer" width="64" height="64">
+            <div class="logo__text logo__text--footer">
+              <span class="logo__name">Phú Yên <span class="logo__accent">Solar</span></span>
+              <span class="logo__tagline">Năng lượng bền vững – Thịnh vượng bền vững</span>
+            </div>
+          </a>
+          <p>Chuyên cung cấp giải pháp đèn năng lượng mặt trời cao cấp – tiết kiệm điện, bền bỉ, thân thiện môi trường.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" aria-label="Zalo"><span>Z</span></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Về Phú Yên Solar</h4>
+          <ul>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Tuyển dụng</a></li>
+            <li><a href="#">Chính sách bảo hành</a></li>
+            <li><a href="#">Chính sách đổi trả</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Sản phẩm</h4>
+          <ul>
+            <li><a href="#">Đèn pha NLMT</a></li>
+            <li><a href="#">Đèn đường NLMT</a></li>
+            <li><a href="#">Đèn sân vườn</a></li>
+            <li><a href="#">Phụ kiện lắp đặt</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Hỗ trợ</h4>
+          <ul>
+            <li><a href="#">Hướng dẫn mua hàng</a></li>
+            <li><a href="#">Hướng dẫn lắp đặt</a></li>
+            <li><a href="#">Câu hỏi thường gặp</a></li>
+            <li><a href="#">Liên hệ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-col--contact">
+          <h4>Liên hệ</h4>
+          <ul class="footer-contact">
+            <li><i class="fa-solid fa-location-dot"></i> 1402, Đại lộ Võ Văn Kiệt, Phường Bình Tiên, TP. Hồ Chí Minh</li>
+            <li><i class="fa-solid fa-phone"></i> <a href="tel:0907673277">090 767 32 77</a></li>
+            <li><i class="fa-solid fa-envelope"></i> <a href="mailto:phuyensolar@gmail.com">phuyensolar@gmail.com</a></li>
+            <li><i class="fa-solid fa-globe"></i> <a href="https://phuyensolar.com" target="_blank" rel="noopener">phuyensolar.com</a></li>
+            <li><i class="fa-solid fa-clock"></i> 8:00 – 22:00 (T2–CN)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <div class="container site-footer__bottom-inner">
+        <p>&copy; 2026 PHÚ YÊN SOLAR. Bản quyền thuộc về Công ty TNHH Phú Yên Solar Việt Nam.</p>
+        <div class="footer-payments">
+          <i class="fa-brands fa-cc-visa"></i>
+          <i class="fa-brands fa-cc-mastercard"></i>
+          <i class="fa-solid fa-building-columns"></i>
+          <i class="fa-solid fa-wallet"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== FLOATING CONTACT ========== -->
+  <div class="floating-contact">
+    <a href="tel:0907673277" class="floating-btn floating-btn--phone" title="Gọi hotline">
+      <i class="fa-solid fa-phone"></i>
+    </a>
+    <a href="#" class="floating-btn floating-btn--zalo" title="Chat Zalo">
+      <span>Z</span>
+    </a>
+    <a href="#" class="floating-btn floating-btn--messenger" title="Chat Messenger">
+      <i class="fa-brands fa-facebook-messenger"></i>
+    </a>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
