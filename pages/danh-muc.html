@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Danh mục đèn năng lượng mặt trời – đèn pha, đèn đường, sân vườn chính hãng Phú Yên Solar.">
+  <meta name="theme-color" content="#0a1d37">
   <title>Danh mục sản phẩm – Phú Yên Solar</title>
+  <link rel="icon" href="../images/logo-icon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -11,7 +14,9 @@
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/catalog.css">
 </head>
-<body data-page="category">
+<body class="has-floating-nav" data-page="category">
+
+  <a href="#main-content" class="skip-link">Chuyển đến nội dung chính</a>
 
   <header class="header-top">
     <div class="container header-top__inner">
@@ -96,7 +101,7 @@
     <aside class="catalog-sidebar" id="catalogSidebar">
       <div class="catalog-sidebar__title">Danh mục</div>
     </aside>
-    <main class="catalog-main">
+    <main class="catalog-main" id="main-content">
       <div class="catalog-main__toolbar">
         <p class="catalog-main__count">Hiển thị <strong id="catalogCount">0</strong> sản phẩm</p>
         <div class="catalog-sort">
@@ -117,38 +122,80 @@
       <div class="container site-footer__grid">
         <div class="footer-col footer-col--brand">
           <a href="../index.html" class="logo logo--footer">
-            <img src="../images/logo-icon.png" alt="" class="logo__img logo__img--footer" width="64" height="64">
+            <img src="../images/logo-icon.png" alt="Phú Yên Solar" class="logo__img logo__img--footer" width="64" height="64">
             <div class="logo__text logo__text--footer">
               <span class="logo__name">Phú Yên <span class="logo__accent">Solar</span></span>
+              <span class="logo__tagline">Năng lượng bền vững – Thịnh vượng bền vững</span>
             </div>
           </a>
-          <p>Chuyên cung cấp giải pháp đèn năng lượng mặt trời cao cấp.</p>
+          <p>Chuyên cung cấp giải pháp đèn năng lượng mặt trời cao cấp – tiết kiệm điện, bền bỉ, thân thiện môi trường.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" aria-label="Zalo"><span>Z</span></a>
+          </div>
         </div>
         <div class="footer-col">
+          <h4>Về Phú Yên Solar</h4>
+          <ul>
+            <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+            <li><a href="du-an.html">Dự án tiêu biểu</a></li>
+            <li><a href="chinh-sach.html#warranty">Chính sách bảo hành</a></li>
+            <li><a href="chinh-sach.html#return">Chính sách đổi trả</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Sản phẩm</h4>
+          <ul>
+            <li><a href="danh-muc.html?cat=den-pha-nlmt">Đèn pha NLMT</a></li>
+            <li><a href="danh-muc.html?cat=den-duong-nlmt">Đèn đường NLMT</a></li>
+            <li><a href="danh-muc.html?cat=den-san-vuon-nlmt">Đèn sân vườn</a></li>
+            <li><a href="danh-muc.html?cat=phu-kien-lap-dat">Phụ kiện lắp đặt</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Hỗ trợ</h4>
+          <ul>
+            <li><a href="tin-tuc.html">Tin tức &amp; Kiến thức</a></li>
+            <li><a href="khuyen-mai.html">Khuyến mãi</a></li>
+            <li><a href="chinh-sach.html">Chính sách &amp; Quy định</a></li>
+            <li><a href="lien-he.html">Liên hệ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-col--contact">
           <h4>Liên hệ</h4>
           <ul class="footer-contact">
+            <li><i class="fa-solid fa-location-dot"></i> 1402, Đại lộ Võ Văn Kiệt, Phường Bình Tiên, TP.HCM</li>
             <li><i class="fa-solid fa-phone"></i> <a href="tel:0907673277">090 767 32 77</a></li>
             <li><i class="fa-solid fa-envelope"></i> <a href="mailto:phuyensolar@gmail.com">phuyensolar@gmail.com</a></li>
+            <li><i class="fa-solid fa-clock"></i> 8:00 – 22:00 (T2–CN)</li>
           </ul>
         </div>
       </div>
     </div>
     <div class="site-footer__bottom">
       <div class="container site-footer__bottom-inner">
-        <p>&copy; 2026 PHÚ YÊN SOLAR.</p>
+        <p>&copy; 2026 PHÚ YÊN SOLAR. Bản quyền thuộc về Công ty TNHH Phú Yên Solar Việt Nam.</p>
+        <div class="footer-payments">
+          <i class="fa-brands fa-cc-visa"></i>
+          <i class="fa-brands fa-cc-mastercard"></i>
+          <i class="fa-solid fa-building-columns"></i>
+          <i class="fa-solid fa-wallet"></i>
+        </div>
       </div>
     </div>
   </footer>
 
   <div class="floating-contact">
-    <a href="tel:0907673277" class="floating-btn floating-btn--phone" title="Gọi hotline"><i class="fa-solid fa-phone"></i></a>
-    <a href="#" class="floating-btn floating-btn--zalo" title="Zalo"><span>Z</span></a>
-    <a href="#" class="floating-btn floating-btn--messenger" title="Messenger"><i class="fa-brands fa-facebook-messenger"></i></a>
+    <a href="tel:0907673277" class="floating-btn floating-btn--phone" aria-label="Gọi hotline 090 767 32 77"><i class="fa-solid fa-phone"></i></a>
+    <a href="#" class="floating-btn floating-btn--zalo" aria-label="Chat Zalo"><span>Z</span></a>
+    <a href="#" class="floating-btn floating-btn--messenger" aria-label="Chat Messenger"><i class="fa-brands fa-facebook-messenger"></i></a>
   </div>
 
-  <script src="../js/products-data.js"></script>
-  <script src="../js/catalog.js"></script>
-  <script src="../js/main.js"></script>
-  <script src="../js/inner-pages.js"></script>
+  <script src="../js/products-data.js" defer></script>
+  <script src="../js/catalog.js" defer></script>
+  <script src="../js/main.js" defer></script>
+  <script src="../js/inner-pages.js" defer></script>
 </body>
 </html>

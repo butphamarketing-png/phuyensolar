@@ -1,13 +1,20 @@
+const pageType = document.body.dataset.page || '';
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 document.addEventListener('DOMContentLoaded', () => {
-  initPageLoader();
+  if (pageType === 'home') {
+    initPageLoader();
+    initFlashCountdown();
+    initHeroSlider();
+    initTrustSlider();
+    initHomeProductPagination();
+    initWhyIconSpin();
+    initStatCounters();
+    initAppointmentForm();
+  }
+
   initCategoryDropdown();
   initMobileNav();
-  initFlashCountdown();
-  initHeroSlider();
-  initTrustSlider();
-  initHomeProductPagination();
-  initWhyIconSpin();
-  initStatCounters();
 });
 
 const isMobileView = () => window.innerWidth <= 992;
@@ -22,7 +29,13 @@ function initPageLoader() {
     document.body.classList.remove('is-loading');
   };
 
-  const minDisplay = new Promise((resolve) => setTimeout(resolve, 1800));
+  if (prefersReducedMotion) {
+    hideLoader();
+    return;
+  }
+
+  const minDelay = 700;
+  const minDisplay = new Promise((resolve) => setTimeout(resolve, minDelay));
   const pageReady = new Promise((resolve) => {
     if (document.readyState === 'complete') resolve();
     else window.addEventListener('load', resolve, { once: true });
@@ -155,8 +168,11 @@ function initHeroSlider() {
     });
   };
 
+  const stopAuto = () => clearInterval(timer);
+
   const startAuto = () => {
-    clearInterval(timer);
+    if (prefersReducedMotion) return;
+    stopAuto();
     timer = setInterval(() => goTo(current + 1), 5000);
   };
 
@@ -176,6 +192,11 @@ function initHeroSlider() {
       startAuto();
     });
   });
+
+  slider.addEventListener('mouseenter', stopAuto);
+  slider.addEventListener('mouseleave', startAuto);
+  slider.addEventListener('focusin', stopAuto);
+  slider.addEventListener('focusout', startAuto);
 
   startAuto();
 }
@@ -413,4 +434,27 @@ function initStatCounters() {
   );
 
   observer.observe(statsBlock);
+}
+
+function initAppointmentForm() {
+  const form = document.getElementById('appointmentForm');
+  const success = document.getElementById('appointmentSuccess');
+  const dateInput = document.getElementById('apptDate');
+  if (!form) return;
+
+  if (dateInput) {
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.setAttribute('min', today);
+  }
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (success) success.classList.add('is-visible');
+    form.reset();
+    if (dateInput) {
+      const today = new Date().toISOString().split('T')[0];
+      dateInput.setAttribute('min', today);
+    }
+    setTimeout(() => success?.classList.remove('is-visible'), 5000);
+  });
 }

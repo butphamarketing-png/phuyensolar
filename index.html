@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Phú Yên Solar – Chuyên đèn năng lượng mặt trời cao cấp. Miễn phí tư vấn, lắp đặt tận nơi, bảo hành chính hãng. Hotline 090 767 32 77.">
+  <meta name="theme-color" content="#0a1d37">
   <title>Phú Yên Solar – Đèn Năng Lượng Mặt Trời Cao Cấp</title>
+  <link rel="icon" href="images/logo-icon.png" type="image/png">
+  <link rel="preload" as="image" href="images/hero-banner.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -11,7 +15,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/catalog.css">
 </head>
-<body class="is-loading" data-page="home">
+<body class="is-loading has-floating-nav" data-page="home">
 
   <!-- ========== LOADING ========== -->
   <div id="pageLoader" class="page-loader" aria-hidden="false">
@@ -19,11 +23,18 @@
       <div class="page-loader__sun"></div>
       <div class="page-loader__rays"></div>
       <div class="page-loader__halo"></div>
+      <div class="page-loader__particles">
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+      </div>
     </div>
     <div class="page-loader__inner">
       <div class="page-loader__logo-wrap">
         <div class="page-loader__logo-glow" aria-hidden="true"></div>
+        <div class="page-loader__ring" aria-hidden="true"></div>
+        <div class="page-loader__ring page-loader__ring--reverse" aria-hidden="true"></div>
         <img src="images/logo-icon.png" alt="" class="page-loader__logo" width="168" height="168">
+        <div class="page-loader__logo-shine" aria-hidden="true"></div>
       </div>
       <p class="page-loader__brand">Phú Yên <span>Solar</span></p>
       <div class="page-loader__bar" role="progressbar" aria-label="Đang tải">
@@ -33,19 +44,21 @@
     </div>
   </div>
 
+  <a href="#main-content" class="skip-link">Chuyển đến nội dung chính</a>
+
   <!-- ========== HEADER TOP ========== -->
   <header class="header-top">
     <div class="container header-top__inner">
       <a href="index.html" class="logo">
-        <img src="images/logo-icon.png" alt="" class="logo__img" width="56" height="56">
+        <img src="images/logo-icon.png" alt="Phú Yên Solar" class="logo__img" width="56" height="56">
         <div class="logo__text">
           <span class="logo__name">Phú Yên <span class="logo__accent">Solar</span></span>
           <span class="logo__tagline">Năng lượng bền vững – Thịnh vượng bền vững</span>
         </div>
       </a>
 
-      <form class="search-bar" action="#" role="search">
-        <input type="search" placeholder="Tìm kiếm sản phẩm..." aria-label="Tìm kiếm sản phẩm">
+      <form class="search-bar" action="pages/danh-muc.html" role="search" method="get">
+        <input type="search" name="q" placeholder="Tìm kiếm sản phẩm..." aria-label="Tìm kiếm sản phẩm">
         <button type="submit" aria-label="Tìm kiếm"><i class="fa-solid fa-magnifying-glass"></i></button>
       </form>
 
@@ -59,7 +72,7 @@
           </div>
         </div>
 
-        <a href="#" class="util-item">
+        <a href="#" class="util-item" aria-label="Giỏ hàng">
           <span class="util-item__icon"><i class="fa-solid fa-cart-shopping"></i><span class="badge">0</span></span>
           <span>Giỏ hàng</span>
         </a>
@@ -112,18 +125,21 @@
     </div>
   </nav>
 
+  <main id="main-content">
+  <h1 class="sr-only">Phú Yên Solar – Đèn năng lượng mặt trời cao cấp</h1>
+
   <!-- ========== HERO BANNER ========== -->
   <section class="hero-section">
     <div class="hero-slider" id="heroSlider">
       <div class="hero-slider__track" id="heroTrack">
         <div class="hero-slide">
-          <img src="images/hero-banner.jpg" alt="Đèn năng lượng mặt trời Phú Yên Solar">
+          <img src="images/hero-banner.jpg" alt="Đèn năng lượng mặt trời Phú Yên Solar" fetchpriority="high" decoding="async" width="1320" height="480">
         </div>
         <div class="hero-slide">
-          <img src="images/projects/project-1.jpg" alt="Dự án chiếu sáng biệt thự Phú Yên Solar">
+          <img src="images/projects/project-1.jpg" alt="Dự án chiếu sáng biệt thự Phú Yên Solar" loading="lazy" decoding="async" width="1320" height="480">
         </div>
         <div class="hero-slide">
-          <img src="images/projects/project-2.jpg" alt="Dự án đèn nhà xưởng Phú Yên Solar">
+          <img src="images/projects/project-2.jpg" alt="Dự án đèn nhà xưởng Phú Yên Solar" loading="lazy" decoding="async" width="1320" height="480">
         </div>
       </div>
       <button type="button" class="hero-slider__btn hero-slider__btn--prev" aria-label="Ảnh trước"><i class="fa-solid fa-chevron-left"></i></button>
@@ -180,8 +196,9 @@
   </section>
 
   <!-- ========== FLASH SALE ========== -->
+  <section class="product-section product-section--flash">
     <div class="container">
-      <div class="section-header section-header--center">
+      <div class="section-header section-header--center section-header--products">
         <div class="section-header__title">
           <span class="section-header__icon section-header__icon--flash"><i class="fa-solid fa-fire-flame-curved flame-burning"></i></span>
           <h2>FLASH<strong>SALE</strong> – GIÁ SỐC HÔM NAY</h2>
@@ -198,14 +215,13 @@
             <div class="countdown__item"><span class="countdown__num" data-unit="seconds">00</span><span class="countdown__unit">Giây</span></div>
           </div>
         </div>
-        <a href="pages/danh-muc.html?cat=den-pha-nlmt" class="section-header__link">Xem tất cả <i class="fa-solid fa-chevron-right"></i></a>
       </div>
 
       <div class="product-grid" id="flashGrid">
         <article class="product-card">
           <span class="product-card__badge product-card__badge--sale">-36%</span>
           <a href="pages/chi-tiet.html?id=den-pha-nlmt-cp03-sl-rad-200w" class="product-card__image">
-            <img src="images/products/pha-200w.jpg" alt="Đèn Pha Phú Yên Solar 200W">
+            <img loading="lazy" decoding="async" src="images/products/pha-200w.jpg" alt="Đèn Pha Phú Yên Solar 200W">
             <span class="product-card__power">200W</span>
           </a>
           <h3 class="product-card__title"><a href="pages/chi-tiet.html?id=den-pha-nlmt-cp03-sl-rad-200w">Đèn Pha Năng Lượng Mặt Trời Phú Yên Solar 200W</a></h3>
@@ -231,7 +247,7 @@
         <article class="product-card">
           <span class="product-card__badge product-card__badge--sale">-33%</span>
           <a href="pages/chi-tiet.html?id=den-duong-all-in-one-150w" class="product-card__image">
-            <img src="images/products/duong-150w.jpg" alt="Đèn Đường All In One 150W">
+            <img loading="lazy" decoding="async" src="images/products/duong-150w.jpg" alt="Đèn Đường All In One 150W">
             <span class="product-card__power">150W</span>
           </a>
           <h3 class="product-card__title"><a href="pages/chi-tiet.html?id=den-duong-all-in-one-150w">Đèn Đường NLMT All In One 150W</a></h3>
@@ -257,7 +273,7 @@
         <article class="product-card">
           <span class="product-card__badge product-card__badge--sale">-29%</span>
           <a href="pages/chi-tiet.html?id=den-pha-cam-bien-chuyen-dong-100w" class="product-card__image">
-            <img src="images/products/cam-bien-100w.jpg" alt="Đèn Pha Cảm Biến 100W">
+            <img loading="lazy" decoding="async" src="images/products/cam-bien-100w.jpg" alt="Đèn Pha Cảm Biến 100W">
             <span class="product-card__power">100W</span>
           </a>
           <h3 class="product-card__title"><a href="pages/chi-tiet.html?id=den-pha-cam-bien-chuyen-dong-100w">Đèn Pha Cảm Biến Chuyển Động 100W</a></h3>
@@ -283,7 +299,7 @@
         <article class="product-card">
           <span class="product-card__badge product-card__badge--sale">-35%</span>
           <a href="pages/chi-tiet.html?id=den-duong-lien-cot-80w" class="product-card__image">
-            <img src="images/products/lien-cot-80w.jpg" alt="Đèn Đường Liền Cột 80W">
+            <img loading="lazy" decoding="async" src="images/products/lien-cot-80w.jpg" alt="Đèn Đường Liền Cột 80W">
             <span class="product-card__power">80W</span>
           </a>
           <h3 class="product-card__title"><a href="pages/chi-tiet.html?id=den-duong-lien-cot-80w">Đèn Đường Liền Cột 80W</a></h3>
@@ -323,19 +339,18 @@
   <!-- ========== SẢN PHẨM BÁN CHẠY ========== -->
   <section class="product-section product-section--bestseller">
     <div class="container">
-      <div class="section-header section-header--center section-header--simple">
+      <div class="section-header section-header--center section-header--products">
         <div class="section-header__title">
           <span class="section-header__icon section-header__icon--fire"><i class="fa-solid fa-fire-flame-curved flame-burning"></i></span>
           <h2>SẢN PHẨM <strong>BÁN CHẠY</strong></h2>
         </div>
-        <a href="pages/danh-muc.html?cat=den-pha-nlmt" class="section-header__link">Xem tất cả <i class="fa-solid fa-chevron-right"></i></a>
       </div>
 
       <div class="product-grid product-grid--bestseller" id="bestsellerGrid">
         <article class="product-card product-card--bestseller">
           <span class="product-card__badge product-card__badge--top">TOP 1</span>
           <a href="pages/chi-tiet.html?id=den-pha-nlmt-cp03-sl-rad-300w" class="product-card__image">
-            <img src="images/products/pha-300w.png" alt="Đèn Pha Phú Yên Solar Pro 300W">
+            <img loading="lazy" decoding="async" src="images/products/pha-300w.png" alt="Đèn Pha Phú Yên Solar Pro 300W">
             <span class="product-card__power">300W</span>
           </a>
           <h3 class="product-card__title"><a href="pages/chi-tiet.html?id=den-pha-nlmt-cp03-sl-rad-300w">Đèn Pha NLMT Phú Yên Solar Pro 300W Solar</a></h3>
@@ -360,7 +375,7 @@
         <article class="product-card product-card--bestseller">
           <span class="product-card__badge product-card__badge--top">TOP 2</span>
           <a href="pages/chi-tiet.html?id=den-duong-lien-than-600w" class="product-card__image">
-            <img src="images/products/duong-600w.png" alt="Đèn Đường Liền Thân 600W">
+            <img loading="lazy" decoding="async" src="images/products/duong-600w.png" alt="Đèn Đường Liền Thân 600W">
             <span class="product-card__power">600W</span>
           </a>
           <h3 class="product-card__title"><a href="pages/chi-tiet.html?id=den-duong-lien-than-600w">Đèn Đường Liền Thân 600W</a></h3>
@@ -385,7 +400,7 @@
         <article class="product-card product-card--bestseller">
           <span class="product-card__badge product-card__badge--top">TOP 3</span>
           <a href="pages/chi-tiet.html?id=den-pha-cao-ap-400w-ip67" class="product-card__image">
-            <img src="images/products/pha-400w.jpg" alt="Đèn Pha Cao Áp 400W">
+            <img loading="lazy" decoding="async" src="images/products/pha-400w.jpg" alt="Đèn Pha Cao Áp 400W">
             <span class="product-card__power">400W</span>
           </a>
           <h3 class="product-card__title"><a href="pages/chi-tiet.html?id=den-pha-cao-ap-400w-ip67">Đèn Pha Cao Áp 400W IP67</a></h3>
@@ -410,7 +425,7 @@
         <article class="product-card product-card--bestseller">
           <span class="product-card__badge product-card__badge--top product-card__badge--top-blue">TOP 4</span>
           <a href="pages/chi-tiet.html?id=den-tru-san-vuon-nlmt-50w" class="product-card__image">
-            <img src="images/products/tru-50w.jpg" alt="Đèn Trụ Sân Vườn 50W">
+            <img loading="lazy" decoding="async" src="images/products/tru-50w.jpg" alt="Đèn Trụ Sân Vườn 50W">
             <span class="product-card__power">50W</span>
           </a>
           <h3 class="product-card__title"><a href="pages/chi-tiet.html?id=den-tru-san-vuon-nlmt-50w">Đèn Trụ Sân Vườn NLMT 50W</a></h3>
@@ -544,7 +559,7 @@
       </div>
       <div class="project-grid">
         <a href="pages/du-an.html" class="project-card">
-          <img src="images/projects/project-1.jpg" alt="Dự án biệt thự">
+          <img loading="lazy" decoding="async" src="images/projects/project-1.jpg" alt="Dự án biệt thự">
           <div class="project-card__overlay">
             <span class="project-card__tag">Biệt thự</span>
             <h3>Chiếu sáng sân vườn biệt thự Vinhomes</h3>
@@ -552,7 +567,7 @@
           </div>
         </a>
         <a href="pages/du-an.html" class="project-card">
-          <img src="images/projects/project-2.jpg" alt="Dự án khu công nghiệp">
+          <img loading="lazy" decoding="async" src="images/projects/project-2.jpg" alt="Dự án khu công nghiệp">
           <div class="project-card__overlay">
             <span class="project-card__tag">Nhà xưởng</span>
             <h3>Hệ thống đèn nhà xưởng 5000m²</h3>
@@ -560,7 +575,7 @@
           </div>
         </a>
         <a href="pages/du-an.html" class="project-card">
-          <img src="images/projects/project-3.jpg" alt="Dự án đường phố">
+          <img loading="lazy" decoding="async" src="images/projects/project-3.jpg" alt="Dự án đường phố">
           <div class="project-card__overlay">
             <span class="project-card__tag">Đường phố</span>
             <h3>Chiếu sáng đường nội bộ khu đô thị</h3>
@@ -657,7 +672,7 @@
       <div class="trend-grid">
         <article class="trend-card">
           <a href="#" class="trend-card__image">
-            <img src="images/trends/trend-1.jpg" alt="Xu hướng pin LiFePO4">
+            <img loading="lazy" decoding="async" src="images/trends/trend-1.jpg" alt="Xu hướng pin LiFePO4">
             <span class="trend-card__tag">Kiến thức</span>
           </a>
           <div class="trend-card__body">
@@ -669,7 +684,7 @@
         </article>
         <article class="trend-card">
           <a href="#" class="trend-card__image">
-            <img src="images/trends/trend-2.jpg" alt="Đèn đường NLMT 2026">
+            <img loading="lazy" decoding="async" src="images/trends/trend-2.jpg" alt="Đèn đường NLMT 2026">
             <span class="trend-card__tag trend-card__tag--orange">Xu hướng</span>
           </a>
           <div class="trend-card__body">
@@ -681,7 +696,7 @@
         </article>
         <article class="trend-card">
           <a href="#" class="trend-card__image">
-            <img src="images/trends/trend-3.jpg" alt="Tính số đèn NLMT">
+            <img loading="lazy" decoding="async" src="images/trends/trend-3.jpg" alt="Tính số đèn NLMT">
             <span class="trend-card__tag">Hướng dẫn</span>
           </a>
           <div class="trend-card__body">
@@ -693,7 +708,7 @@
         </article>
         <article class="trend-card">
           <a href="#" class="trend-card__image">
-            <img src="images/trends/trend-4.jpg" alt="Đèn NLMT thông minh IoT">
+            <img loading="lazy" decoding="async" src="images/trends/trend-4.jpg" alt="Đèn NLMT thông minh IoT">
             <span class="trend-card__tag trend-card__tag--orange">Xu hướng</span>
           </a>
           <div class="trend-card__body">
@@ -710,32 +725,125 @@
     </div>
   </section>
 
-  <!-- ========== SẴN SÀNG NÂNG TẦM ========== -->
+  <!-- ========== ĐẶT HẸN TƯ VẤN ========== -->
   <section class="ready-section" id="bao-gia">
     <div class="container">
       <div class="ready-section__header">
-        <h2>SẴN SÀNG NÂNG TẦM HỆ THỐNG CHIẾU SÁNG?</h2>
-        <p>Liên hệ ngay để được đội ngũ chuyên gia tư vấn miễn phí và báo giá nhanh chóng.</p>
+        <span class="ready-section__badge"><i class="fa-solid fa-sun"></i> Miễn phí tư vấn</span>
+        <h2>ĐẶT HẸN TƯ VẤN</h2>
+        <p>Đặt lịch với chuyên gia Phú Yên Solar – khảo sát, báo giá và lắp đặt tận nơi.</p>
+        <ul class="ready-section__trust" aria-label="Cam kết dịch vụ">
+          <li><i class="fa-solid fa-circle-check"></i> Phản hồi trong 15 phút</li>
+          <li><i class="fa-solid fa-circle-check"></i> Khảo sát tận nơi</li>
+          <li><i class="fa-solid fa-circle-check"></i> Bảo hành chính hãng</li>
+        </ul>
       </div>
 
       <div class="ready-section__box">
-        <div class="ready-promo">
-          <div class="ready-promo__visual">
-            <img src="images/projects/project-1.jpg" alt="Biệt thự chiếu sáng bằng đèn NLMT Phú Yên Solar" class="ready-promo__bg">
-            <div class="ready-promo__visual-overlay" aria-hidden="true"></div>
+        <div class="appointment-form-wrap">
+          <div class="appointment-form__head">
+            <span class="appointment-form__icon"><i class="fa-solid fa-calendar-check"></i></span>
+            <div>
+              <h3>Điền thông tin đặt hẹn</h3>
+              <p>Chúng tôi gọi xác nhận lịch sớm nhất có thể</p>
+            </div>
           </div>
-          <div class="ready-promo__content">
-            <span class="ready-promo__label">GIẢI PHÁP NLMT HÀNG ĐẦU</span>
-            <h3 class="ready-promo__title">ĐÈN NLMT <span>CAO CẤP</span></h3>
-            <p class="ready-promo__desc">Tiết kiệm điện – Bền bỉ – Thân thiện môi trường</p>
-            <a href="tel:0907673277" class="ready-promo__cta">
-              NHẬN BÁO GIÁ
-              <span class="ready-promo__cta-icon"><i class="fa-solid fa-arrow-right"></i></span>
-            </a>
+          <div class="form-success" id="appointmentSuccess">
+            <i class="fa-solid fa-circle-check"></i>
+            Đặt hẹn thành công! Chúng tôi sẽ gọi xác nhận sớm nhất.
           </div>
+          <form class="appointment-form" id="appointmentForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="apptName">Họ và tên <span>*</span></label>
+                <div class="form-field">
+                  <i class="fa-solid fa-user form-field__icon" aria-hidden="true"></i>
+                  <input type="text" id="apptName" name="name" placeholder="Nguyễn Văn A" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="apptPhone">Số điện thoại <span>*</span></label>
+                <div class="form-field">
+                  <i class="fa-solid fa-phone form-field__icon" aria-hidden="true"></i>
+                  <input type="tel" id="apptPhone" name="phone" placeholder="090 767 32 77" required>
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="apptDate">Ngày hẹn <span>*</span></label>
+                <div class="form-field">
+                  <i class="fa-solid fa-calendar form-field__icon" aria-hidden="true"></i>
+                  <input type="date" id="apptDate" name="date" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="apptTime">Giờ hẹn <span>*</span></label>
+                <div class="form-field">
+                  <i class="fa-solid fa-clock form-field__icon" aria-hidden="true"></i>
+                  <select id="apptTime" name="time" required>
+                    <option value="">Chọn giờ</option>
+                    <option>08:00 – 09:00</option>
+                    <option>09:00 – 10:00</option>
+                    <option>10:00 – 11:00</option>
+                    <option>13:00 – 14:00</option>
+                    <option>14:00 – 15:00</option>
+                    <option>15:00 – 16:00</option>
+                    <option>16:00 – 17:00</option>
+                    <option>17:00 – 18:00</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="apptService">Dịch vụ <span>*</span></label>
+                <div class="form-field">
+                  <i class="fa-solid fa-lightbulb form-field__icon" aria-hidden="true"></i>
+                  <select id="apptService" name="service" required>
+                    <option value="">Chọn dịch vụ</option>
+                    <option>Tư vấn sản phẩm</option>
+                    <option>Báo giá &amp; khảo sát</option>
+                    <option>Lắp đặt tận nơi</option>
+                    <option>Bảo hành &amp; sửa chữa</option>
+                    <option>Dự án chiếu sáng quy mô lớn</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="apptAddress">Khu vực</label>
+                <div class="form-field">
+                  <i class="fa-solid fa-location-dot form-field__icon" aria-hidden="true"></i>
+                  <input type="text" id="apptAddress" name="address" placeholder="Quận, TP hoặc địa chỉ">
+                </div>
+              </div>
+            </div>
+            <div class="form-group form-group--note">
+              <label for="apptNote">Ghi chú thêm</label>
+              <div class="form-field form-field--textarea">
+                <i class="fa-solid fa-pen form-field__icon" aria-hidden="true"></i>
+                <textarea id="apptNote" name="note" placeholder="Số lượng đèn, công suất, yêu cầu lắp đặt..."></textarea>
+              </div>
+            </div>
+            <div class="appointment-form__footer">
+              <button type="submit" class="btn btn--primary appointment-form__submit">
+                <i class="fa-solid fa-paper-plane"></i> GỬI ĐẶT HẸN
+              </button>
+              <p class="appointment-form__hint"><i class="fa-solid fa-shield-halved"></i> Thông tin được bảo mật, không chia sẻ bên thứ ba</p>
+            </div>
+          </form>
         </div>
 
-        <div class="ready-links">
+        <aside class="ready-links">
+          <a href="tel:0907673277" class="ready-hotline">
+            <span class="ready-hotline__icon"><i class="fa-solid fa-headset"></i></span>
+            <span class="ready-hotline__text">
+              <small>Gọi ngay – tư vấn 24/7</small>
+              <strong>090 767 32 77</strong>
+            </span>
+            <i class="fa-solid fa-phone-volume ready-hotline__arrow"></i>
+          </a>
+          <div class="ready-links__head">Liên hệ nhanh</div>
           <a href="#" class="ready-link">
             <span class="ready-link__icon ready-link__icon--facebook"><i class="fa-brands fa-facebook-f"></i></span>
             <span class="ready-link__text">
@@ -776,10 +884,12 @@
             </span>
             <i class="fa-solid fa-chevron-right ready-link__arrow"></i>
           </a>
-        </div>
+        </aside>
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- ========== FOOTER ========== -->
   <footer class="site-footer">
@@ -855,20 +965,20 @@
 
   <!-- ========== FLOATING CONTACT ========== -->
   <div class="floating-contact">
-    <a href="tel:0907673277" class="floating-btn floating-btn--phone" title="Gọi hotline">
+    <a href="tel:0907673277" class="floating-btn floating-btn--phone" aria-label="Gọi hotline 090 767 32 77">
       <i class="fa-solid fa-phone"></i>
     </a>
-    <a href="#" class="floating-btn floating-btn--zalo" title="Chat Zalo">
+    <a href="#" class="floating-btn floating-btn--zalo" aria-label="Chat Zalo">
       <span>Z</span>
     </a>
-    <a href="#" class="floating-btn floating-btn--messenger" title="Chat Messenger">
+    <a href="#" class="floating-btn floating-btn--messenger" aria-label="Chat Messenger">
       <i class="fa-brands fa-facebook-messenger"></i>
     </a>
   </div>
 
-  <script src="js/products-data.js"></script>
-  <script src="js/catalog.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/inner-pages.js"></script>
+  <script src="js/products-data.js" defer></script>
+  <script src="js/catalog.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/inner-pages.js" defer></script>
 </body>
 </html>

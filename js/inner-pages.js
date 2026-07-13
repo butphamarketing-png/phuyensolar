@@ -74,10 +74,12 @@ function renderPromoProducts() {
 
 function initInnerPages() {
   initNavActive();
-  initProjectFilters();
-  initPolicyTabs();
-  initContactForm();
-  renderPromoProducts();
+
+  const page = document.body.dataset.page;
+  if (page === 'projects') initProjectFilters();
+  if (page === 'policy') initPolicyTabs();
+  if (page === 'contact') initContactForm();
+  if (page === 'promo') renderPromoProducts();
 }
 
 document.addEventListener('DOMContentLoaded', initInnerPages);

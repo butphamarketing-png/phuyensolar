@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://phuyensolar-two.vercel.app/sitemap.xml

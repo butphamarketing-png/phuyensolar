@@ -14,11 +14,47 @@ function imgPath(src) {
   return src.startsWith('http') ? src : `${getBasePath()}${src}`;
 }
 
+function productImgAttrs(src, alt, options = {}) {
+  const lazy = options.lazy !== false;
+  const attrs = [
+    `src="${imgPath(src)}"`,
+    `alt="${alt}"`,
+    lazy ? 'loading="lazy"' : '',
+    'decoding="async"',
+    options.priority ? 'fetchpriority="high"' : '',
+  ].filter(Boolean).join(' ');
+  return attrs;
+}
+
+function filterProductsByQuery(products, query) {
+  if (!query) return products;
+  return products.filter((p) => {
+    const haystack = `${p.name} ${p.power} ${p.description || ''}`.toLowerCase();
+    return haystack.includes(query);
+  });
+}
+
+function renderCatalogSidebar(activeCatId) {
+  const sidebar = document.getElementById('catalogSidebar');
+  if (!sidebar) return;
+
+  sidebar.innerHTML = `
+    <div class="catalog-sidebar__title">Danh mục</div>
+    ${CATEGORIES.map((cat) => `
+      <a href="${categoryUrl(cat.id)}" class="catalog-sidebar__link${cat.id === activeCatId ? ' is-active' : ''}">
+        <i class="fa-solid ${cat.icon}"></i>
+        <span>${cat.name}</span>
+        <em>${cat.count}</em>
+      </a>
+    `).join('')}
+  `;
+}
+
 function buildMegaPanelHtml(cat) {
   const featured = getFeaturedProducts(cat.id, 4);
   const megaItems = featured.map((p) => `
     <a href="${productUrl(p.id)}" class="mega-product">
-      <img src="${imgPath(p.image)}" alt="${p.name}">
+      <img ${productImgAttrs(p.image, p.name, { lazy: true })}>
       <div class="mega-product__info">
         <strong>${p.name}</strong>
         <span class="mega-product__price">${formatPrice(p.price)}</span>
@@ -103,7 +139,7 @@ function renderProductCard(product, options = {}) {
     <article class="product-card">
       ${badgeHtml}
       <a href="${productUrl(product.id)}" class="product-card__image">
-        <img src="${imgPath(product.image)}" alt="${product.name}">
+        <img ${productImgAttrs(product.image, product.name, { lazy: options.lazy !== false })}>
         <span class="product-card__power">${product.power}</span>
       </a>
       <h3 class="product-card__title"><a href="${productUrl(product.id)}">${product.name}</a></h3>
@@ -131,35 +167,68 @@ function renderProductCard(product, options = {}) {
 function renderCategoryPage() {
   const params = new URLSearchParams(window.location.search);
   const catId = params.get('cat');
-  const category = getCategoryById(catId);
+  const query = (params.get('q') || '').trim().toLowerCase();
+  const titleEl = document.getElementById('catalogTitle');
+  const descEl = document.getElementById('catalogDesc');
+  const countEl = document.getElementById('catalogCount');
+  const breadcrumbCat = document.getElementById('breadcrumbCat');
+  const grid = document.getElementById('catalogGrid');
+  if (!titleEl || !grid) return;
 
+  if (query && !catId) {
+    const products = filterProductsByQuery(PRODUCTS, query);
+    document.title = `Tìm kiếm "${query}" – Phú Yên Solar`;
+    titleEl.textContent = `Kết quả tìm kiếm “${query}”`;
+    if (descEl) {
+      descEl.textContent = products.length
+        ? `Tìm thấy ${products.length} sản phẩm phù hợp với từ khóa của bạn.`
+        : 'Không tìm thấy sản phẩm phù hợp. Vui lòng thử từ khóa khác hoặc liên hệ tư vấn.';
+    }
+    if (countEl) countEl.textContent = products.length;
+    if (breadcrumbCat) {
+      breadcrumbCat.textContent = 'Tìm kiếm';
+      breadcrumbCat.href = `${getBasePath()}pages/danh-muc.html?q=${encodeURIComponent(query)}`;
+    }
+    renderCatalogSidebar(null);
+    grid.innerHTML = products.length
+      ? products.map((p) => renderProductCard(p)).join('')
+      : '<p class="catalog-empty">Không có sản phẩm nào khớp với từ khóa.</p>';
+    return;
+  }
+
+  const category = getCategoryById(catId);
   if (!category) {
-    document.getElementById('catalogTitle').textContent = 'Danh mục không tồn tại';
+    titleEl.textContent = 'Danh mục không tồn tại';
+    if (descEl) descEl.textContent = 'Vui lòng chọn danh mục khác hoặc quay về trang chủ.';
     return;
   }
 
   document.title = `${category.name} – Phú Yên Solar`;
-  document.getElementById('catalogTitle').textContent = category.name;
-  document.getElementById('catalogDesc').textContent =
-    `Khám phá ${category.count}+ sản phẩm ${category.name.toLowerCase()} chính hãng – giá tốt, bảo hành toàn quốc.`;
-  document.getElementById('catalogCount').textContent = getProductsByCategory(catId).length;
-  document.getElementById('breadcrumbCat').textContent = category.name;
-  document.getElementById('breadcrumbCat').href = categoryUrl(catId);
-
-  const sidebar = document.getElementById('catalogSidebar');
-  if (sidebar) {
-    sidebar.innerHTML = CATEGORIES.map((cat) => `
-      <a href="${categoryUrl(cat.id)}" class="catalog-sidebar__link${cat.id === catId ? ' is-active' : ''}">
-        <i class="fa-solid ${cat.icon}"></i>
-        <span>${cat.name}</span>
-        <em>${cat.count}</em>
-      </a>
-    `).join('');
+  titleEl.textContent = category.name;
+  if (descEl) {
+    descEl.textContent =
+      `Khám phá ${category.count}+ sản phẩm ${category.name.toLowerCase()} chính hãng – giá tốt, bảo hành toàn quốc.`;
   }
 
-  const grid = document.getElementById('catalogGrid');
-  const products = getProductsByCategory(catId);
-  grid.innerHTML = products.map((p) => renderProductCard(p)).join('');
+  let products = getProductsByCategory(catId);
+  if (query) {
+    products = filterProductsByQuery(products, query);
+    titleEl.textContent = `${category.name}: “${query}”`;
+    if (descEl) {
+      descEl.textContent = `Tìm thấy ${products.length} sản phẩm trong danh mục ${category.name.toLowerCase()}.`;
+    }
+  }
+
+  if (countEl) countEl.textContent = products.length;
+  if (breadcrumbCat) {
+    breadcrumbCat.textContent = category.name;
+    breadcrumbCat.href = categoryUrl(catId);
+  }
+
+  renderCatalogSidebar(catId);
+  grid.innerHTML = products.length
+    ? products.map((p) => renderProductCard(p)).join('')
+    : '<p class="catalog-empty">Không có sản phẩm trong danh mục này.</p>';
 }
 
 function renderProductDetail() {
@@ -184,7 +253,7 @@ function renderProductDetail() {
 
   document.getElementById('productDetail').innerHTML = `
     <div class="product-detail__gallery">
-      <img src="${imgPath(product.image)}" alt="${product.name}" class="product-detail__main-img" id="productMainImg">
+      <img ${productImgAttrs(product.image, product.name, { lazy: false })} class="product-detail__main-img" id="productMainImg">
     </div>
     <div class="product-detail__info">
       <span class="product-detail__brand">Phú Yên Solar</span>
@@ -247,12 +316,27 @@ function initNavProductDropdown() {
   navItem.appendChild(submenu);
 }
 
+function initGlobalSearch() {
+  document.querySelectorAll('form.search-bar').forEach((form) => {
+    form.addEventListener('submit', (e) => {
+      const input = form.querySelector('input[type="search"], input[name="q"]');
+      const q = input?.value.trim();
+      if (!q) return;
+
+      e.preventDefault();
+      const base = getBasePath();
+      window.location.href = `${base}pages/danh-muc.html?q=${encodeURIComponent(q)}`;
+    });
+  });
+}
+
 function initCatalog() {
   const categoryList = document.getElementById('categoryList');
   if (categoryList) renderCategoryMenu(categoryList);
 
   initCategoryMegaPanel();
   initNavProductDropdown();
+  initGlobalSearch();
 
   if (document.body.dataset.page === 'category') renderCategoryPage();
   if (document.body.dataset.page === 'product') renderProductDetail();
