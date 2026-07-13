@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giới thiệu – Phú Yên Solar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/catalog.css">
+  <link rel="stylesheet" href="../css/inner.css">
+</head>
+<body data-page="about">
+
+  <header class="header-top">
+    <div class="container header-top__inner">
+      <a href="../index.html" class="logo">
+        <img src="../images/logo-icon.png" alt="" class="logo__img" width="56" height="56">
+        <div class="logo__text">
+          <span class="logo__name">Phú Yên <span class="logo__accent">Solar</span></span>
+          <span class="logo__tagline">Năng lượng bền vững – Thịnh vượng bền vững</span>
+        </div>
+      </a>
+      <form class="search-bar" action="danh-muc.html" role="search">
+        <input type="search" name="q" placeholder="Tìm kiếm sản phẩm..." aria-label="Tìm kiếm sản phẩm">
+        <button type="submit" aria-label="Tìm kiếm"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+      <div class="header-utils">
+        <div class="hotline">
+          <i class="fa-solid fa-phone-volume"></i>
+          <div>
+            <span class="hotline__label">Hotline tư vấn:</span>
+            <a href="tel:0907673277" class="hotline__number">090 767 32 77</a>
+            <span class="hotline__hours">(8:00 - 22:00)</span>
+          </div>
+        </div>
+        <a href="#" class="util-item">
+          <span class="util-item__icon"><i class="fa-solid fa-cart-shopping"></i><span class="badge">0</span></span>
+          <span>Giỏ hàng</span>
+        </a>
+        <a href="../index.html#bao-gia" class="btn btn--primary btn--quote">
+          <i class="fa-solid fa-file-lines"></i> NHẬN BÁO GIÁ
+        </a>
+        <a href="tel:0907673277" class="header-call-mobile" aria-label="Gọi hotline 090 767 32 77">
+          <i class="fa-solid fa-phone"></i>
+        </a>
+      </div>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Mở menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <nav class="nav-bar" id="navBar">
+    <div class="container nav-bar__inner">
+      <div class="category-dropdown" id="categoryDropdown">
+        <button class="nav-categories" id="categoryToggle" aria-expanded="false" aria-haspopup="true">
+          <i class="fa-solid fa-bars"></i> DANH MỤC SẢN PHẨM
+          <i class="fa-solid fa-chevron-down nav-categories__arrow"></i>
+        </button>
+        <div class="category-flyout" id="categoryFlyout">
+          <aside class="category-sidebar" id="categorySidebar">
+            <ul class="category-list" id="categoryList"></ul>
+          </aside>
+          <div class="category-mega-panel" id="categoryMegaPanel" aria-hidden="true"></div>
+        </div>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="../index.html" data-nav="home">Trang chủ</a></li>
+        <li><a href="gioi-thieu.html" data-nav="about">Giới thiệu</a></li>
+        <li class="has-dropdown"><a href="danh-muc.html?cat=den-pha-nlmt" data-nav="products">Sản phẩm <i class="fa-solid fa-chevron-down"></i></a></li>
+        <li><a href="du-an.html" data-nav="projects">Dự án</a></li>
+        <li><a href="tin-tuc.html" data-nav="news">Tin tức</a></li>
+        <li><a href="khuyen-mai.html" data-nav="promo">Khuyến mãi</a></li>
+        <li><a href="chinh-sach.html" data-nav="policy">Chính sách</a></li>
+        <li><a href="lien-he.html" data-nav="contact">Liên hệ</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-breadcrumb">
+    <div class="container">
+      <a href="../index.html">Trang chủ</a><span>/</span>
+      <span>Giới thiệu</span>
+    </div>
+  </div>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Về Phú Yên Solar</h1>
+      <p>Tiên phong giải pháp đèn năng lượng mặt trời cao cấp – bền bỉ, tiết kiệm, thân thiện môi trường</p>
+    </div>
+  </section>
+
+  <main class="inner-page">
+    <section class="inner-section">
+      <div class="container">
+        <div class="about-intro">
+          <div class="about-intro__image">
+            <img src="../images/hero-banner.jpg" alt="Phú Yên Solar – Đèn năng lượng mặt trời">
+          </div>
+          <div class="about-intro__content">
+            <h2>Hành trình <span>10 năm</span> thắp sáng Việt Nam</h2>
+            <p>Thành lập năm 2016, Phú Yên Solar bắt đầu từ khát vọng mang nguồn năng lượng sạch đến từng ngôi nhà, từng con đường và khu công nghiệp trên khắp cả nước. Chúng tôi chuyên nghiên cứu, sản xuất và phân phối hệ thống đèn năng lượng mặt trời với chip LED Bridgelux, pin LiFePO4 và tiêu chuẩn chống nước IP67.</p>
+            <p>Với đội ngũ kỹ thuật giàu kinh nghiệm, Phú Yên Solar không chỉ bán sản phẩm mà còn đồng hành cùng khách hàng từ khâu khảo sát, tư vấn thiết kế, lắp đặt tận nơi đến bảo hành và hỗ trợ sau bán hàng 24/7. Mỗi dự án hoàn thành là một cam kết về chất lượng ánh sáng, độ bền và hiệu quả kinh tế lâu dài.</p>
+            <p>Chúng tôi tin rằng chiếu sáng bằng năng lượng mặt trời không chỉ giúp tiết kiệm chi phí điện mà còn góp phần xây dựng một tương lai xanh, bền vững cho thế hệ mai sau.</p>
+            <div class="about-stats">
+              <div class="about-stat">
+                <strong>10+</strong>
+                <span>Năm kinh nghiệm</span>
+              </div>
+              <div class="about-stat">
+                <strong>10.000+</strong>
+                <span>Khách hàng tin tưởng</span>
+              </div>
+              <div class="about-stat">
+                <strong>500+</strong>
+                <span>Dự án hoàn thành</span>
+              </div>
+              <div class="about-stat">
+                <strong>44+</strong>
+                <span>Sản phẩm đa dạng</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="inner-section inner-section--alt">
+      <div class="container">
+        <div class="inner-section__header">
+          <span class="inner-section__label">Giá trị cốt lõi</span>
+          <h2>Vì sao chọn <span>Phú Yên Solar</span>?</h2>
+          <p>Chúng tôi cam kết mang đến giải pháp chiếu sáng toàn diện – chất lượng cao, giá cả hợp lý và dịch vụ tận tâm.</p>
+        </div>
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-card__icon"><i class="fa-solid fa-certificate"></i></div>
+            <h3>Chất lượng cao cấp</h3>
+            <p>Chip LED Bridgelux, pin LiFePO4 bền bỉ, chuẩn IP67 chống nước bụi – đạt tiêu chuẩn quốc tế</p>
+          </div>
+          <div class="why-card">
+            <div class="why-card__icon"><i class="fa-solid fa-leaf"></i></div>
+            <h3>Tiết kiệm 100% điện</h3>
+            <p>Không tốn điện lưới, tự sạc ban ngày – sáng suốt đêm, hoàn vốn đầu tư nhanh chóng</p>
+          </div>
+          <div class="why-card">
+            <div class="why-card__icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+            <h3>Lắp đặt tận nơi</h3>
+            <p>Đội kỹ thuật chuyên nghiệp, khảo sát – thi công – nghiệm thu – bảo hành trọn gói toàn quốc</p>
+          </div>
+          <div class="why-card">
+            <div class="why-card__icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3>Bảo hành lên đến 3 năm</h3>
+            <p>Cam kết đổi mới 1-đổi-1 trong thời gian bảo hành, hỗ trợ kỹ thuật 24/7</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="inner-section">
+      <div class="container">
+        <div class="inner-section__header">
+          <span class="inner-section__label">Lịch sử phát triển</span>
+          <h2>Cột mốc <span>đáng nhớ</span></h2>
+          <p>Hành trình phát triển bền vững của Phú Yên Solar qua từng giai đoạn.</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline__item">
+            <div class="timeline__year">2016</div>
+            <h3>Thành lập Phú Yên Solar</h3>
+            <p>Khởi đầu với dòng đèn pha và đèn đường năng lượng mặt trời, phục vụ thị trường miền Nam và miền Trung.</p>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__year">2019</div>
+            <h3>Mở rộng mạng lưới toàn quốc</h3>
+            <p>Thiết lập hệ thống đại lý tại 15 tỉnh thành, triển khai dịch vụ lắp đặt tận nơi và bảo hành tại chỗ.</p>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__year">2022</div>
+            <h3>500+ dự án lớn hoàn thành</h3>
+            <p>Cung cấp giải pháp chiếu sáng cho biệt thự, nhà xưởng, khu đô thị và hạ tầng giao thông trên cả nước.</p>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__year">2026</div>
+            <h3>Tiên phong công nghệ thông minh</h3>
+            <p>Ra mắt dòng đèn NLMT tích hợp IoT, pin LiFePO4 thế hệ mới và hệ sinh thái 44+ sản phẩm đa dạng.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="inner-section">
+      <div class="container">
+        <div class="inner-cta">
+          <h3>Sẵn sàng chuyển đổi sang năng lượng mặt trời?</h3>
+          <p>Liên hệ ngay để được tư vấn miễn phí và nhận báo giá chi tiết cho dự án của bạn.</p>
+          <div class="inner-cta__actions">
+            <a href="tel:0907673277" class="btn btn--primary"><i class="fa-solid fa-phone"></i> Gọi 090 767 32 77</a>
+            <a href="lien-he.html" class="btn btn--outline">Liên hệ tư vấn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__top">
+      <div class="container site-footer__grid">
+        <div class="footer-col footer-col--brand">
+          <a href="../index.html" class="logo logo--footer">
+            <img src="../images/logo-icon.png" alt="" class="logo__img logo__img--footer" width="64" height="64">
+            <div class="logo__text logo__text--footer">
+              <span class="logo__name">Phú Yên <span class="logo__accent">Solar</span></span>
+              <span class="logo__tagline">Năng lượng bền vững – Thịnh vượng bền vững</span>
+            </div>
+          </a>
+          <p>Chuyên cung cấp giải pháp đèn năng lượng mặt trời cao cấp – tiết kiệm điện, bền bỉ, thân thiện môi trường.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" aria-label="Zalo"><span>Z</span></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Về Phú Yên Solar</h4>
+          <ul>
+            <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+            <li><a href="du-an.html">Dự án tiêu biểu</a></li>
+            <li><a href="chinh-sach.html#warranty">Chính sách bảo hành</a></li>
+            <li><a href="chinh-sach.html#return">Chính sách đổi trả</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Sản phẩm</h4>
+          <ul>
+            <li><a href="danh-muc.html?cat=den-pha-nlmt">Đèn pha NLMT</a></li>
+            <li><a href="danh-muc.html?cat=den-duong-nlmt">Đèn đường NLMT</a></li>
+            <li><a href="danh-muc.html?cat=den-san-vuon-nlmt">Đèn sân vườn</a></li>
+            <li><a href="danh-muc.html?cat=phu-kien-lap-dat">Phụ kiện lắp đặt</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Hỗ trợ</h4>
+          <ul>
+            <li><a href="tin-tuc.html">Tin tức &amp; Kiến thức</a></li>
+            <li><a href="khuyen-mai.html">Khuyến mãi</a></li>
+            <li><a href="chinh-sach.html">Chính sách &amp; Quy định</a></li>
+            <li><a href="lien-he.html">Liên hệ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-col--contact">
+          <h4>Liên hệ</h4>
+          <ul class="footer-contact">
+            <li><i class="fa-solid fa-location-dot"></i> 1402, Đại lộ Võ Văn Kiệt, Phường Bình Tiên, TP.HCM</li>
+            <li><i class="fa-solid fa-phone"></i> <a href="tel:0907673277">090 767 32 77</a></li>
+            <li><i class="fa-solid fa-envelope"></i> <a href="mailto:phuyensolar@gmail.com">phuyensolar@gmail.com</a></li>
+            <li><i class="fa-solid fa-clock"></i> 8:00 – 22:00 (T2–CN)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <div class="container site-footer__bottom-inner">
+        <p>&copy; 2026 PHÚ YÊN SOLAR. Bản quyền thuộc về Công ty TNHH Phú Yên Solar Việt Nam.</p>
+        <div class="footer-payments">
+          <i class="fa-brands fa-cc-visa"></i>
+          <i class="fa-brands fa-cc-mastercard"></i>
+          <i class="fa-solid fa-building-columns"></i>
+          <i class="fa-solid fa-wallet"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-contact">
+    <a href="tel:0907673277" class="floating-btn floating-btn--phone" title="Gọi hotline"><i class="fa-solid fa-phone"></i></a>
+    <a href="#" class="floating-btn floating-btn--zalo" title="Zalo"><span>Z</span></a>
+    <a href="#" class="floating-btn floating-btn--messenger" title="Messenger"><i class="fa-brands fa-facebook-messenger"></i></a>
+  </div>
+
+  <script src="../js/products-data.js"></script>
+  <script src="../js/catalog.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/inner-pages.js"></script>
+</body>
+</html>

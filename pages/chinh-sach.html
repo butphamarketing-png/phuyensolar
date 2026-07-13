@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chính sách & Quy định – Phú Yên Solar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/catalog.css">
+  <link rel="stylesheet" href="../css/inner.css">
+</head>
+<body data-page="policy">
+
+  <header class="header-top">
+    <div class="container header-top__inner">
+      <a href="../index.html" class="logo">
+        <img src="../images/logo-icon.png" alt="" class="logo__img" width="56" height="56">
+        <div class="logo__text">
+          <span class="logo__name">Phú Yên <span class="logo__accent">Solar</span></span>
+          <span class="logo__tagline">Năng lượng bền vững – Thịnh vượng bền vững</span>
+        </div>
+      </a>
+      <form class="search-bar" action="danh-muc.html" role="search">
+        <input type="search" name="q" placeholder="Tìm kiếm sản phẩm..." aria-label="Tìm kiếm sản phẩm">
+        <button type="submit" aria-label="Tìm kiếm"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+      <div class="header-utils">
+        <div class="hotline">
+          <i class="fa-solid fa-phone-volume"></i>
+          <div>
+            <span class="hotline__label">Hotline tư vấn:</span>
+            <a href="tel:0907673277" class="hotline__number">090 767 32 77</a>
+            <span class="hotline__hours">(8:00 - 22:00)</span>
+          </div>
+        </div>
+        <a href="#" class="util-item">
+          <span class="util-item__icon"><i class="fa-solid fa-cart-shopping"></i><span class="badge">0</span></span>
+          <span>Giỏ hàng</span>
+        </a>
+        <a href="../index.html#bao-gia" class="btn btn--primary btn--quote">
+          <i class="fa-solid fa-file-lines"></i> NHẬN BÁO GIÁ
+        </a>
+        <a href="tel:0907673277" class="header-call-mobile" aria-label="Gọi hotline 090 767 32 77">
+          <i class="fa-solid fa-phone"></i>
+        </a>
+      </div>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Mở menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <nav class="nav-bar" id="navBar">
+    <div class="container nav-bar__inner">
+      <div class="category-dropdown" id="categoryDropdown">
+        <button class="nav-categories" id="categoryToggle" aria-expanded="false" aria-haspopup="true">
+          <i class="fa-solid fa-bars"></i> DANH MỤC SẢN PHẨM
+          <i class="fa-solid fa-chevron-down nav-categories__arrow"></i>
+        </button>
+        <div class="category-flyout" id="categoryFlyout">
+          <aside class="category-sidebar" id="categorySidebar">
+            <ul class="category-list" id="categoryList"></ul>
+          </aside>
+          <div class="category-mega-panel" id="categoryMegaPanel" aria-hidden="true"></div>
+        </div>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="../index.html" data-nav="home">Trang chủ</a></li>
+        <li><a href="gioi-thieu.html" data-nav="about">Giới thiệu</a></li>
+        <li class="has-dropdown"><a href="danh-muc.html?cat=den-pha-nlmt" data-nav="products">Sản phẩm <i class="fa-solid fa-chevron-down"></i></a></li>
+        <li><a href="du-an.html" data-nav="projects">Dự án</a></li>
+        <li><a href="tin-tuc.html" data-nav="news">Tin tức</a></li>
+        <li><a href="khuyen-mai.html" data-nav="promo">Khuyến mãi</a></li>
+        <li><a href="chinh-sach.html" data-nav="policy">Chính sách</a></li>
+        <li><a href="lien-he.html" data-nav="contact">Liên hệ</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-breadcrumb">
+    <div class="container">
+      <a href="../index.html">Trang chủ</a><span>/</span>
+      <span>Chính sách &amp; Quy định</span>
+    </div>
+  </div>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Chính sách &amp; Quy định</h1>
+      <p>Cam kết minh bạch về bảo hành, đổi trả, vận chuyển, thanh toán và bảo mật thông tin khách hàng</p>
+    </div>
+  </section>
+
+  <main class="inner-page">
+    <section class="inner-section">
+      <div class="container">
+        <div class="policy-layout">
+          <nav class="policy-nav" aria-label="Chính sách">
+            <button type="button" class="is-active" data-policy="warranty"><i class="fa-solid fa-shield-halved"></i> Bảo hành</button>
+            <button type="button" data-policy="return"><i class="fa-solid fa-rotate-left"></i> Đổi trả</button>
+            <button type="button" data-policy="shipping"><i class="fa-solid fa-truck-fast"></i> Vận chuyển</button>
+            <button type="button" data-policy="payment"><i class="fa-solid fa-credit-card"></i> Thanh toán</button>
+            <button type="button" data-policy="privacy"><i class="fa-solid fa-lock"></i> Bảo mật</button>
+          </nav>
+
+          <div class="policy-content">
+            <div class="policy-panel is-active" id="warranty">
+              <h3>Chính sách bảo hành</h3>
+              <p>Phú Yên Solar cam kết bảo hành chính hãng lên đến <strong>3 năm</strong> cho toàn bộ sản phẩm đèn năng lượng mặt trời, áp dụng chính sách <strong>1 đổi 1</strong> trong thời gian bảo hành khi sản phẩm gặp lỗi do nhà sản xuất.</p>
+              <h4>Phạm vi bảo hành</h4>
+              <ul>
+                <li>Pin lithium LiFePO4, tấm pin quang điện, chip LED và mạch điều khiển</li>
+                <li>Lỗi kỹ thuật xuất xưởng, hỏng hóc trong quá trình sử dụng bình thường</li>
+                <li>Hỗ trợ kỹ thuật từ xa và cử kỹ thuật viên đến tận nơi (miễn phí trong bán kính 50km)</li>
+              </ul>
+              <h4>Điều kiện bảo hành</h4>
+              <ul>
+                <li>Sản phẩm còn tem bảo hành, hóa đơn mua hàng hợp lệ</li>
+                <li>Không tự ý tháo lắp, sửa chữa hoặc can thiệp vào cấu trúc sản phẩm</li>
+                <li>Không hư hỏng do thiên tai, va đập mạnh hoặc sử dụng sai mục đích</li>
+              </ul>
+              <p>Hotline bảo hành: <a href="tel:0907673277">090 767 32 77</a> – Phản hồi trong vòng 24 giờ làm việc.</p>
+            </div>
+
+            <div class="policy-panel" id="return">
+              <h3>Chính sách đổi trả 30 ngày</h3>
+              <p>Khách hàng có quyền đổi hoặc trả sản phẩm trong vòng <strong>30 ngày</strong> kể từ ngày nhận hàng nếu sản phẩm không đúng mô tả, lỗi kỹ thuật hoặc không phù hợp nhu cầu sử dụng.</p>
+              <h4>Điều kiện đổi trả</h4>
+              <ul>
+                <li>Sản phẩm còn nguyên seal, đầy đủ phụ kiện, hộp và tài liệu kèm theo</li>
+                <li>Chưa qua sử dụng, không có dấu hiệu lắp đặt hoặc hư hỏng do người dùng</li>
+                <li>Có hóa đơn mua hàng hoặc mã đơn hàng xác nhận</li>
+              </ul>
+              <h4>Quy trình đổi trả</h4>
+              <ul>
+                <li>Liên hệ hotline hoặc email <a href="mailto:phuyensolar@gmail.com">phuyensolar@gmail.com</a> để đăng ký đổi trả</li>
+                <li>Phú Yên Solar xác nhận và hướng dẫn gửi hàng trong 2 ngày làm việc</li>
+                <li>Kiểm tra sản phẩm và hoàn tiền/đổi hàng trong 3–5 ngày làm việc</li>
+              </ul>
+              <p>Chi phí vận chuyển đổi trả do lỗi nhà cung cấp: Phú Yên Solar chịu hoàn toàn.</p>
+            </div>
+
+            <div class="policy-panel" id="shipping">
+              <h3>Chính sách vận chuyển</h3>
+              <p>Phú Yên Solar hỗ trợ <strong>miễn phí vận chuyển toàn quốc</strong> cho đơn hàng từ 2.000.000đ. Đơn hàng dưới mức này áp dụng phí ship theo khu vực, được thông báo rõ trước khi xác nhận đơn.</p>
+              <h4>Thời gian giao hàng</h4>
+              <ul>
+                <li>Nội thành TP.HCM: 1–2 ngày làm việc</li>
+                <li>Các tỉnh lân cận: 2–4 ngày làm việc</li>
+                <li>Miền Trung, Miền Bắc: 3–7 ngày làm việc</li>
+              </ul>
+              <h4>Đơn hàng lớn &amp; dự án</h4>
+              <ul>
+                <li>Giao hàng bằng xe tải chuyên dụng cho đơn số lượng lớn</li>
+                <li>Hỗ trợ bốc xếp và kiểm đếm tại công trường</li>
+                <li>Lắp đặt tận nơi theo yêu cầu (báo giá riêng)</li>
+              </ul>
+              <p>Mọi đơn hàng đều được đóng gói cẩn thận, bảo vệ tấm pin và pin lithium trong quá trình vận chuyển.</p>
+            </div>
+
+            <div class="policy-panel" id="payment">
+              <h3>Chính sách thanh toán</h3>
+              <p>Phú Yên Solar hỗ trợ đa dạng hình thức thanh toán an toàn, tiện lợi cho cá nhân và doanh nghiệp.</p>
+              <h4>Hình thức thanh toán</h4>
+              <ul>
+                <li><strong>COD (Thanh toán khi nhận hàng):</strong> Kiểm tra hàng trước khi thanh toán – áp dụng toàn quốc</li>
+                <li><strong>Chuyển khoản ngân hàng:</strong> Vietcombank, Techcombank, MB Bank – ưu đãi thêm 1% cho đơn chuyển khoản</li>
+                <li><strong>Ví điện tử:</strong> MoMo, ZaloPay, VNPay – thanh toán nhanh qua mã QR</li>
+              </ul>
+              <h4>Thanh toán dự án</h4>
+              <ul>
+                <li>Đặt cọc 30% khi ký hợp đồng</li>
+                <li>Thanh toán 50% khi giao hàng đến công trình</li>
+                <li>Thanh toán 20% còn lại sau nghiệm thu và bàn giao</li>
+              </ul>
+              <p>Xuất hóa đơn VAT đầy đủ theo yêu cầu. Liên hệ <a href="tel:0907673277">090 767 32 77</a> để được tư vấn phương thức phù hợp.</p>
+            </div>
+
+            <div class="policy-panel" id="privacy">
+              <h3>Chính sách bảo mật thông tin</h3>
+              <p>Phú Yên Solar cam kết bảo vệ thông tin cá nhân của khách hàng theo quy định pháp luật Việt Nam. Mọi dữ liệu thu thập chỉ phục vụ mục đích tư vấn, bán hàng và chăm sóc khách hàng.</p>
+              <h4>Thông tin thu thập</h4>
+              <ul>
+                <li>Họ tên, số điện thoại, email, địa chỉ giao hàng</li>
+                <li>Thông tin đơn hàng, lịch sử mua hàng và yêu cầu tư vấn</li>
+                <li>Dữ liệu truy cập website (cookie, IP) để cải thiện trải nghiệm</li>
+              </ul>
+              <h4>Cam kết bảo mật</h4>
+              <ul>
+                <li>Không chia sẻ, bán hoặc trao đổi thông tin khách hàng cho bên thứ ba</li>
+                <li>Mã hóa dữ liệu thanh toán và lưu trữ trên hệ thống bảo mật</li>
+                <li>Khách hàng có quyền yêu cầu chỉnh sửa hoặc xóa thông tin cá nhân</li>
+              </ul>
+              <p>Mọi thắc mắc về bảo mật, vui lòng liên hệ: <a href="mailto:phuyensolar@gmail.com">phuyensolar@gmail.com</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="inner-cta">
+          <h3>Còn thắc mắc về chính sách?</h3>
+          <p>Đội ngũ hỗ trợ Phú Yên Solar sẵn sàng giải đáp mọi câu hỏi của bạn.</p>
+          <div class="inner-cta__actions">
+            <a href="tel:0907673277" class="btn btn--primary"><i class="fa-solid fa-phone"></i> Gọi 090 767 32 77</a>
+            <a href="lien-he.html" class="btn btn--outline">Gửi câu hỏi</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__top">
+      <div class="container site-footer__grid">
+        <div class="footer-col footer-col--brand">
+          <a href="../index.html" class="logo logo--footer">
+            <img src="../images/logo-icon.png" alt="" class="logo__img logo__img--footer" width="64" height="64">
+            <div class="logo__text logo__text--footer">
+              <span class="logo__name">Phú Yên <span class="logo__accent">Solar</span></span>
+              <span class="logo__tagline">Năng lượng bền vững – Thịnh vượng bền vững</span>
+            </div>
+          </a>
+          <p>Chuyên cung cấp giải pháp đèn năng lượng mặt trời cao cấp – tiết kiệm điện, bền bỉ, thân thiện môi trường.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" aria-label="Zalo"><span>Z</span></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Về Phú Yên Solar</h4>
+          <ul>
+            <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+            <li><a href="du-an.html">Dự án tiêu biểu</a></li>
+            <li><a href="chinh-sach.html#warranty">Chính sách bảo hành</a></li>
+            <li><a href="chinh-sach.html#return">Chính sách đổi trả</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Sản phẩm</h4>
+          <ul>
+            <li><a href="danh-muc.html?cat=den-pha-nlmt">Đèn pha NLMT</a></li>
+            <li><a href="danh-muc.html?cat=den-duong-nlmt">Đèn đường NLMT</a></li>
+            <li><a href="danh-muc.html?cat=den-san-vuon-nlmt">Đèn sân vườn</a></li>
+            <li><a href="danh-muc.html?cat=phu-kien-lap-dat">Phụ kiện lắp đặt</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Hỗ trợ</h4>
+          <ul>
+            <li><a href="tin-tuc.html">Tin tức &amp; Kiến thức</a></li>
+            <li><a href="khuyen-mai.html">Khuyến mãi</a></li>
+            <li><a href="chinh-sach.html">Chính sách &amp; Quy định</a></li>
+            <li><a href="lien-he.html">Liên hệ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-col--contact">
+          <h4>Liên hệ</h4>
+          <ul class="footer-contact">
+            <li><i class="fa-solid fa-location-dot"></i> 1402, Đại lộ Võ Văn Kiệt, Phường Bình Tiên, TP.HCM</li>
+            <li><i class="fa-solid fa-phone"></i> <a href="tel:0907673277">090 767 32 77</a></li>
+            <li><i class="fa-solid fa-envelope"></i> <a href="mailto:phuyensolar@gmail.com">phuyensolar@gmail.com</a></li>
+            <li><i class="fa-solid fa-clock"></i> 8:00 – 22:00 (T2–CN)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <div class="container site-footer__bottom-inner">
+        <p>&copy; 2026 PHÚ YÊN SOLAR. Bản quyền thuộc về Công ty TNHH Phú Yên Solar Việt Nam.</p>
+        <div class="footer-payments">
+          <i class="fa-brands fa-cc-visa"></i>
+          <i class="fa-brands fa-cc-mastercard"></i>
+          <i class="fa-solid fa-building-columns"></i>
+          <i class="fa-solid fa-wallet"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-contact">
+    <a href="tel:0907673277" class="floating-btn floating-btn--phone" title="Gọi hotline"><i class="fa-solid fa-phone"></i></a>
+    <a href="#" class="floating-btn floating-btn--zalo" title="Zalo"><span>Z</span></a>
+    <a href="#" class="floating-btn floating-btn--messenger" title="Messenger"><i class="fa-brands fa-facebook-messenger"></i></a>
+  </div>
+
+  <script src="../js/products-data.js"></script>
+  <script src="../js/catalog.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/inner-pages.js"></script>
+</body>
+</html>

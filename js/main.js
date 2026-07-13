@@ -126,41 +126,43 @@ function initCategoryDropdown() {
 }
 
 function initFlashCountdown() {
-  const countdown = document.getElementById('flashCountdown');
-  if (!countdown) return;
+  ['flashCountdown', 'promoCountdown'].forEach((id) => {
+    const countdown = document.getElementById(id);
+    if (!countdown) return;
 
-  const endTime = new Date();
-  endTime.setHours(23, 59, 59, 999);
+    const endTime = new Date();
+    endTime.setHours(23, 59, 59, 999);
 
-  const units = {
-    days: countdown.querySelector('[data-unit="days"]'),
-    hours: countdown.querySelector('[data-unit="hours"]'),
-    minutes: countdown.querySelector('[data-unit="minutes"]'),
-    seconds: countdown.querySelector('[data-unit="seconds"]'),
-  };
+    const units = {
+      days: countdown.querySelector('[data-unit="days"]'),
+      hours: countdown.querySelector('[data-unit="hours"]'),
+      minutes: countdown.querySelector('[data-unit="minutes"]'),
+      seconds: countdown.querySelector('[data-unit="seconds"]'),
+    };
 
-  const pad = (n) => String(n).padStart(2, '0');
+    const pad = (n) => String(n).padStart(2, '0');
 
-  const tick = () => {
-    const diff = endTime - Date.now();
-    if (diff <= 0) {
-      Object.values(units).forEach((el) => { if (el) el.textContent = '00'; });
-      return;
-    }
+    const tick = () => {
+      const diff = endTime - Date.now();
+      if (diff <= 0) {
+        Object.values(units).forEach((el) => { if (el) el.textContent = '00'; });
+        return;
+      }
 
-    const d = Math.floor(diff / 86400000);
-    const h = Math.floor((diff % 86400000) / 3600000);
-    const m = Math.floor((diff % 3600000) / 60000);
-    const s = Math.floor((diff % 60000) / 1000);
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff % 86400000) / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
 
-    if (units.days) units.days.textContent = pad(d);
-    if (units.hours) units.hours.textContent = pad(h);
-    if (units.minutes) units.minutes.textContent = pad(m);
-    if (units.seconds) units.seconds.textContent = pad(s);
-  };
+      if (units.days) units.days.textContent = pad(d);
+      if (units.hours) units.hours.textContent = pad(h);
+      if (units.minutes) units.minutes.textContent = pad(m);
+      if (units.seconds) units.seconds.textContent = pad(s);
+    };
 
-  tick();
-  setInterval(tick, 1000);
+    tick();
+    setInterval(tick, 1000);
+  });
 }
 
 function initWhyIconSpin() {

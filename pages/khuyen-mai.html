@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Danh mục sản phẩm – Phú Yên Solar</title>
+  <title>Khuyến mãi & Ưu đãi – Phú Yên Solar</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/catalog.css">
+  <link rel="stylesheet" href="../css/inner.css">
 </head>
-<body data-page="category">
+<body data-page="promo">
 
   <header class="header-top">
     <div class="container header-top__inner">
@@ -80,37 +81,76 @@
   <div class="page-breadcrumb">
     <div class="container">
       <a href="../index.html">Trang chủ</a><span>/</span>
-      <a href="danh-muc.html?cat=den-pha-nlmt">Sản phẩm</a><span>/</span>
-      <a href="#" id="breadcrumbCat">Danh mục</a>
+      <span>Khuyến mãi &amp; Ưu đãi</span>
     </div>
   </div>
 
   <section class="page-hero">
     <div class="container">
-      <h1 id="catalogTitle">Danh mục sản phẩm</h1>
-      <p id="catalogDesc">Đang tải...</p>
+      <h1>Khuyến mãi &amp; Ưu đãi</h1>
+      <p>Săn deal giá sốc, nhận mã giảm giá và ưu đãi đặc biệt dành riêng cho khách hàng Phú Yên Solar</p>
     </div>
   </section>
 
-  <div class="container catalog-layout">
-    <aside class="catalog-sidebar" id="catalogSidebar">
-      <div class="catalog-sidebar__title">Danh mục</div>
-    </aside>
-    <main class="catalog-main">
-      <div class="catalog-main__toolbar">
-        <p class="catalog-main__count">Hiển thị <strong id="catalogCount">0</strong> sản phẩm</p>
-        <div class="catalog-sort">
-          <select aria-label="Sắp xếp">
-            <option>Mặc định</option>
-            <option>Giá: Thấp → Cao</option>
-            <option>Giá: Cao → Thấp</option>
-            <option>Bán chạy nhất</option>
-          </select>
+  <main class="inner-page">
+    <section class="inner-section">
+      <div class="container">
+        <div class="promo-banner">
+          <div>
+            <h2><i class="fa-solid fa-fire-flame-curved"></i> FLASH SALE – GIÁ SỐC HÔM NAY</h2>
+            <p>Giảm đến 40% cho đèn pha, đèn đường và đèn sân vườn. Số lượng có hạn!</p>
+          </div>
+          <div class="countdown" id="promoCountdown">
+            <span class="countdown__label">Kết thúc sau:</span>
+            <div class="countdown__timer">
+              <div class="countdown__item"><span class="countdown__num" data-unit="days">00</span><span class="countdown__unit">Ngày</span></div>
+              <span class="countdown__sep">:</span>
+              <div class="countdown__item"><span class="countdown__num" data-unit="hours">00</span><span class="countdown__unit">Giờ</span></div>
+              <span class="countdown__sep">:</span>
+              <div class="countdown__item"><span class="countdown__num" data-unit="minutes">00</span><span class="countdown__unit">Phút</span></div>
+              <span class="countdown__sep">:</span>
+              <div class="countdown__item"><span class="countdown__num" data-unit="seconds">00</span><span class="countdown__unit">Giây</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="promo-coupons">
+          <div class="promo-coupon">
+            <strong>GIẢM 350K</strong>
+            <span>Đơn từ 5.000.000đ</span>
+            <em>Mã: PY350K</em>
+          </div>
+          <div class="promo-coupon">
+            <strong>GIẢM 500K</strong>
+            <span>Đơn từ 10.000.000đ</span>
+            <em>Mã: PY500K</em>
+          </div>
+          <div class="promo-coupon">
+            <strong>GIẢM 1 TRIỆU</strong>
+            <span>Đơn từ 30.000.000đ</span>
+            <em>Mã: PY1M</em>
+          </div>
+        </div>
+
+        <div class="inner-section__header">
+          <span class="inner-section__label">Sản phẩm khuyến mãi</span>
+          <h2>Deal <span>hot</span> trong tuần</h2>
+          <p>Các sản phẩm đang giảm giá sâu nhất – cập nhật theo thời gian thực.</p>
+        </div>
+
+        <div class="product-grid" id="promoGrid"></div>
+
+        <div class="inner-cta">
+          <h3>Muốn báo giá số lượng lớn với ưu đãi riêng?</h3>
+          <p>Liên hệ hotline để nhận chính sách giá đại lý và chiết khấu dự án.</p>
+          <div class="inner-cta__actions">
+            <a href="tel:0907673277" class="btn btn--primary"><i class="fa-solid fa-phone"></i> Gọi 090 767 32 77</a>
+            <a href="lien-he.html" class="btn btn--outline">Yêu cầu báo giá</a>
+          </div>
         </div>
       </div>
-      <div class="catalog-grid" id="catalogGrid"></div>
-    </main>
-  </div>
+    </section>
+  </main>
 
   <footer class="site-footer">
     <div class="site-footer__top">
@@ -120,22 +160,64 @@
             <img src="../images/logo-icon.png" alt="" class="logo__img logo__img--footer" width="64" height="64">
             <div class="logo__text logo__text--footer">
               <span class="logo__name">Phú Yên <span class="logo__accent">Solar</span></span>
+              <span class="logo__tagline">Năng lượng bền vững – Thịnh vượng bền vững</span>
             </div>
           </a>
-          <p>Chuyên cung cấp giải pháp đèn năng lượng mặt trời cao cấp.</p>
+          <p>Chuyên cung cấp giải pháp đèn năng lượng mặt trời cao cấp – tiết kiệm điện, bền bỉ, thân thiện môi trường.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" aria-label="Zalo"><span>Z</span></a>
+          </div>
         </div>
         <div class="footer-col">
+          <h4>Về Phú Yên Solar</h4>
+          <ul>
+            <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+            <li><a href="du-an.html">Dự án tiêu biểu</a></li>
+            <li><a href="chinh-sach.html#warranty">Chính sách bảo hành</a></li>
+            <li><a href="chinh-sach.html#return">Chính sách đổi trả</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Sản phẩm</h4>
+          <ul>
+            <li><a href="danh-muc.html?cat=den-pha-nlmt">Đèn pha NLMT</a></li>
+            <li><a href="danh-muc.html?cat=den-duong-nlmt">Đèn đường NLMT</a></li>
+            <li><a href="danh-muc.html?cat=den-san-vuon-nlmt">Đèn sân vườn</a></li>
+            <li><a href="danh-muc.html?cat=phu-kien-lap-dat">Phụ kiện lắp đặt</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Hỗ trợ</h4>
+          <ul>
+            <li><a href="tin-tuc.html">Tin tức &amp; Kiến thức</a></li>
+            <li><a href="khuyen-mai.html">Khuyến mãi</a></li>
+            <li><a href="chinh-sach.html">Chính sách &amp; Quy định</a></li>
+            <li><a href="lien-he.html">Liên hệ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-col--contact">
           <h4>Liên hệ</h4>
           <ul class="footer-contact">
+            <li><i class="fa-solid fa-location-dot"></i> 1402, Đại lộ Võ Văn Kiệt, Phường Bình Tiên, TP.HCM</li>
             <li><i class="fa-solid fa-phone"></i> <a href="tel:0907673277">090 767 32 77</a></li>
             <li><i class="fa-solid fa-envelope"></i> <a href="mailto:phuyensolar@gmail.com">phuyensolar@gmail.com</a></li>
+            <li><i class="fa-solid fa-clock"></i> 8:00 – 22:00 (T2–CN)</li>
           </ul>
         </div>
       </div>
     </div>
     <div class="site-footer__bottom">
       <div class="container site-footer__bottom-inner">
-        <p>&copy; 2026 PHÚ YÊN SOLAR.</p>
+        <p>&copy; 2026 PHÚ YÊN SOLAR. Bản quyền thuộc về Công ty TNHH Phú Yên Solar Việt Nam.</p>
+        <div class="footer-payments">
+          <i class="fa-brands fa-cc-visa"></i>
+          <i class="fa-brands fa-cc-mastercard"></i>
+          <i class="fa-solid fa-building-columns"></i>
+          <i class="fa-solid fa-wallet"></i>
+        </div>
       </div>
     </div>
   </footer>

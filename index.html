@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/catalog.css">
 </head>
-<body class="is-loading">
+<body class="is-loading" data-page="home">
 
   <!-- ========== LOADING ========== -->
   <div id="pageLoader" class="page-loader" aria-hidden="false">
@@ -98,16 +98,16 @@
       </div>
 
       <ul class="nav-menu">
-        <li><a href="#" class="active">Trang chủ</a></li>
-        <li><a href="#">Giới thiệu</a></li>
+        <li><a href="index.html" data-nav="home">Trang chủ</a></li>
+        <li><a href="pages/gioi-thieu.html" data-nav="about">Giới thiệu</a></li>
         <li class="has-dropdown">
-          <a href="pages/danh-muc.html?cat=den-pha-nlmt">Sản phẩm <i class="fa-solid fa-chevron-down"></i></a>
+          <a href="pages/danh-muc.html?cat=den-pha-nlmt" data-nav="products">Sản phẩm <i class="fa-solid fa-chevron-down"></i></a>
         </li>
-        <li><a href="#">Dự án</a></li>
-        <li><a href="#">Tin tức</a></li>
-        <li><a href="#">Khuyến mãi</a></li>
-        <li><a href="#">Chính sách</a></li>
-        <li><a href="#">Liên hệ</a></li>
+        <li><a href="pages/du-an.html" data-nav="projects">Dự án</a></li>
+        <li><a href="pages/tin-tuc.html" data-nav="news">Tin tức</a></li>
+        <li><a href="pages/khuyen-mai.html" data-nav="promo">Khuyến mãi</a></li>
+        <li><a href="pages/chinh-sach.html" data-nav="policy">Chính sách</a></li>
+        <li><a href="pages/lien-he.html" data-nav="contact">Liên hệ</a></li>
       </ul>
     </div>
   </nav>
@@ -510,10 +510,10 @@
           <span class="section-header__icon section-header__icon--project"><i class="fa-solid fa-building"></i></span>
           <h2>DỰ ÁN <strong>TIÊU BIỂU</strong></h2>
         </div>
-        <a href="pages/danh-muc.html?cat=den-pha-nlmt" class="section-header__link">Xem tất cả <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="pages/du-an.html" class="section-header__link">Xem tất cả <i class="fa-solid fa-chevron-right"></i></a>
       </div>
       <div class="project-grid">
-        <a href="#" class="project-card">
+        <a href="pages/du-an.html" class="project-card">
           <img src="images/projects/project-1.jpg" alt="Dự án biệt thự">
           <div class="project-card__overlay">
             <span class="project-card__tag">Biệt thự</span>
@@ -521,7 +521,7 @@
             <p>Hà Nội · 120 đèn pha + 45 đèn sân vườn</p>
           </div>
         </a>
-        <a href="#" class="project-card">
+        <a href="pages/du-an.html" class="project-card">
           <img src="images/projects/project-2.jpg" alt="Dự án khu công nghiệp">
           <div class="project-card__overlay">
             <span class="project-card__tag">Nhà xưởng</span>
@@ -529,7 +529,7 @@
             <p>Bình Dương · 200 đèn nhà xưởng 200W</p>
           </div>
         </a>
-        <a href="#" class="project-card">
+        <a href="pages/du-an.html" class="project-card">
           <img src="images/projects/project-3.jpg" alt="Dự án đường phố">
           <div class="project-card__overlay">
             <span class="project-card__tag">Đường phố</span>
@@ -622,7 +622,7 @@
           <span class="section-header__icon section-header__icon--trend"><i class="fa-solid fa-book-open"></i></span>
           <h2>XU HƯỚNG & <strong>KIẾN THỨC</strong></h2>
         </div>
-        <a href="pages/danh-muc.html?cat=den-pha-nlmt" class="section-header__link">Xem tất cả <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="pages/tin-tuc.html" class="section-header__link">Xem tất cả <i class="fa-solid fa-chevron-right"></i></a>
       </div>
       <div class="trend-grid">
         <article class="trend-card">
@@ -779,10 +779,10 @@
         <div class="footer-col">
           <h4>Về Phú Yên Solar</h4>
           <ul>
-            <li><a href="#">Giới thiệu</a></li>
-            <li><a href="#">Tuyển dụng</a></li>
-            <li><a href="#">Chính sách bảo hành</a></li>
-            <li><a href="#">Chính sách đổi trả</a></li>
+            <li><a href="pages/gioi-thieu.html">Giới thiệu</a></li>
+            <li><a href="pages/du-an.html">Dự án tiêu biểu</a></li>
+            <li><a href="pages/chinh-sach.html">Chính sách bảo hành</a></li>
+            <li><a href="pages/chinh-sach.html">Chính sách đổi trả</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -797,10 +797,10 @@
         <div class="footer-col">
           <h4>Hỗ trợ</h4>
           <ul>
-            <li><a href="#">Hướng dẫn mua hàng</a></li>
-            <li><a href="#">Hướng dẫn lắp đặt</a></li>
-            <li><a href="#">Câu hỏi thường gặp</a></li>
-            <li><a href="#">Liên hệ</a></li>
+            <li><a href="pages/khuyen-mai.html">Khuyến mãi</a></li>
+            <li><a href="pages/tin-tuc.html">Tin tức &amp; kiến thức</a></li>
+            <li><a href="pages/chinh-sach.html">Chính sách mua hàng</a></li>
+            <li><a href="pages/lien-he.html">Liên hệ</a></li>
           </ul>
         </div>
         <div class="footer-col footer-col--contact">
@@ -844,5 +844,6 @@
   <script src="js/products-data.js"></script>
   <script src="js/catalog.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/inner-pages.js"></script>
 </body>
 </html>

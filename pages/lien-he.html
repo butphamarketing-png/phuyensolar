@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liên hệ – Phú Yên Solar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/catalog.css">
+  <link rel="stylesheet" href="../css/inner.css">
+</head>
+<body data-page="contact">
+
+  <header class="header-top">
+    <div class="container header-top__inner">
+      <a href="../index.html" class="logo">
+        <img src="../images/logo-icon.png" alt="" class="logo__img" width="56" height="56">
+        <div class="logo__text">
+          <span class="logo__name">Phú Yên <span class="logo__accent">Solar</span></span>
+          <span class="logo__tagline">Năng lượng bền vững – Thịnh vượng bền vững</span>
+        </div>
+      </a>
+      <form class="search-bar" action="danh-muc.html" role="search">
+        <input type="search" name="q" placeholder="Tìm kiếm sản phẩm..." aria-label="Tìm kiếm sản phẩm">
+        <button type="submit" aria-label="Tìm kiếm"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+      <div class="header-utils">
+        <div class="hotline">
+          <i class="fa-solid fa-phone-volume"></i>
+          <div>
+            <span class="hotline__label">Hotline tư vấn:</span>
+            <a href="tel:0907673277" class="hotline__number">090 767 32 77</a>
+            <span class="hotline__hours">(8:00 - 22:00)</span>
+          </div>
+        </div>
+        <a href="#" class="util-item">
+          <span class="util-item__icon"><i class="fa-solid fa-cart-shopping"></i><span class="badge">0</span></span>
+          <span>Giỏ hàng</span>
+        </a>
+        <a href="../index.html#bao-gia" class="btn btn--primary btn--quote">
+          <i class="fa-solid fa-file-lines"></i> NHẬN BÁO GIÁ
+        </a>
+        <a href="tel:0907673277" class="header-call-mobile" aria-label="Gọi hotline 090 767 32 77">
+          <i class="fa-solid fa-phone"></i>
+        </a>
+      </div>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Mở menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <nav class="nav-bar" id="navBar">
+    <div class="container nav-bar__inner">
+      <div class="category-dropdown" id="categoryDropdown">
+        <button class="nav-categories" id="categoryToggle" aria-expanded="false" aria-haspopup="true">
+          <i class="fa-solid fa-bars"></i> DANH MỤC SẢN PHẨM
+          <i class="fa-solid fa-chevron-down nav-categories__arrow"></i>
+        </button>
+        <div class="category-flyout" id="categoryFlyout">
+          <aside class="category-sidebar" id="categorySidebar">
+            <ul class="category-list" id="categoryList"></ul>
+          </aside>
+          <div class="category-mega-panel" id="categoryMegaPanel" aria-hidden="true"></div>
+        </div>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="../index.html" data-nav="home">Trang chủ</a></li>
+        <li><a href="gioi-thieu.html" data-nav="about">Giới thiệu</a></li>
+        <li class="has-dropdown"><a href="danh-muc.html?cat=den-pha-nlmt" data-nav="products">Sản phẩm <i class="fa-solid fa-chevron-down"></i></a></li>
+        <li><a href="du-an.html" data-nav="projects">Dự án</a></li>
+        <li><a href="tin-tuc.html" data-nav="news">Tin tức</a></li>
+        <li><a href="khuyen-mai.html" data-nav="promo">Khuyến mãi</a></li>
+        <li><a href="chinh-sach.html" data-nav="policy">Chính sách</a></li>
+        <li><a href="lien-he.html" data-nav="contact">Liên hệ</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-breadcrumb">
+    <div class="container">
+      <a href="../index.html">Trang chủ</a><span>/</span>
+      <span>Liên hệ</span>
+    </div>
+  </div>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Liên hệ với chúng tôi</h1>
+      <p>Đội ngũ Phú Yên Solar sẵn sàng tư vấn miễn phí – phản hồi trong vòng 30 phút trong giờ làm việc</p>
+    </div>
+  </section>
+
+  <main class="inner-page">
+    <section class="inner-section">
+      <div class="container">
+        <div class="contact-layout">
+          <div class="contact-info-cards">
+            <div class="contact-info-card">
+              <div class="contact-info-card__icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <h4>Địa chỉ showroom</h4>
+                <p>1402, Đại lộ Võ Văn Kiệt, Phường Bình Tiên, TP.HCM</p>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-info-card__icon"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <h4>Hotline tư vấn</h4>
+                <p><a href="tel:0907673277">090 767 32 77</a></p>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-info-card__icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <h4>Email</h4>
+                <p><a href="mailto:phuyensolar@gmail.com">phuyensolar@gmail.com</a></p>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-info-card__icon"><i class="fa-solid fa-clock"></i></div>
+              <div>
+                <h4>Giờ làm việc</h4>
+                <p>8:00 – 22:00 (Thứ 2 – Chủ nhật)</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-wrap">
+            <h3>Gửi yêu cầu tư vấn</h3>
+            <p>Điền thông tin bên dưới, chúng tôi sẽ liên hệ lại sớm nhất.</p>
+            <div class="form-success" id="formSuccess">
+              <i class="fa-solid fa-circle-check"></i> Cảm ơn bạn! Yêu cầu đã được gửi thành công. Chúng tôi sẽ liên hệ trong thời gian sớm nhất.
+            </div>
+            <form class="contact-form" id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contactName">Họ và tên <span>*</span></label>
+                  <input type="text" id="contactName" name="name" placeholder="Nguyễn Văn A" required>
+                </div>
+                <div class="form-group">
+                  <label for="contactPhone">Số điện thoại <span>*</span></label>
+                  <input type="tel" id="contactPhone" name="phone" placeholder="090 xxx xx xx" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="contactEmail">Email</label>
+                <input type="email" id="contactEmail" name="email" placeholder="email@example.com">
+              </div>
+              <div class="form-group">
+                <label for="contactSubject">Chủ đề <span>*</span></label>
+                <select id="contactSubject" name="subject" required>
+                  <option value="">-- Chọn chủ đề --</option>
+                  <option value="tu-van-san-pham">Tư vấn sản phẩm</option>
+                  <option value="bao-gia-du-an">Báo giá dự án</option>
+                  <option value="lap-dat">Lắp đặt tận nơi</option>
+                  <option value="bao-hanh">Bảo hành &amp; sửa chữa</option>
+                  <option value="khac">Khác</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="contactMessage">Nội dung <span>*</span></label>
+                <textarea id="contactMessage" name="message" placeholder="Mô tả nhu cầu của bạn..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary">
+                <i class="fa-solid fa-paper-plane"></i> Gửi yêu cầu
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="contact-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4947!2d106.6297!3d10.7402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTQwMiDEkOGpbiBs4buNbCBWw5QgVsOgbiBLaeG7hXQsIFBoxrDhu51uZyBCw6xuaCBUaWVuLCBI4buTIENow60gTWluaA!5e0!3m2!1svi!2s!4v1"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Bản đồ Phú Yên Solar – 1402 Đại lộ Võ Văn Kiệt, Phường Bình Tiên, TP.HCM">
+          </iframe>
+        </div>
+
+        <div class="inner-cta">
+          <h3>Cần tư vấn gấp? Gọi ngay hotline!</h3>
+          <p>Đội ngũ kỹ thuật viên Phú Yên Solar luôn sẵn sàng hỗ trợ bạn 24/7.</p>
+          <div class="inner-cta__actions">
+            <a href="tel:0907673277" class="btn btn--primary"><i class="fa-solid fa-phone"></i> Gọi 090 767 32 77</a>
+            <a href="danh-muc.html?cat=den-pha-nlmt" class="btn btn--outline">Xem sản phẩm</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__top">
+      <div class="container site-footer__grid">
+        <div class="footer-col footer-col--brand">
+          <a href="../index.html" class="logo logo--footer">
+            <img src="../images/logo-icon.png" alt="" class="logo__img logo__img--footer" width="64" height="64">
+            <div class="logo__text logo__text--footer">
+              <span class="logo__name">Phú Yên <span class="logo__accent">Solar</span></span>
+              <span class="logo__tagline">Năng lượng bền vững – Thịnh vượng bền vững</span>
+            </div>
+          </a>
+          <p>Chuyên cung cấp giải pháp đèn năng lượng mặt trời cao cấp – tiết kiệm điện, bền bỉ, thân thiện môi trường.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" aria-label="Zalo"><span>Z</span></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Về Phú Yên Solar</h4>
+          <ul>
+            <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+            <li><a href="du-an.html">Dự án tiêu biểu</a></li>
+            <li><a href="chinh-sach.html#warranty">Chính sách bảo hành</a></li>
+            <li><a href="chinh-sach.html#return">Chính sách đổi trả</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Sản phẩm</h4>
+          <ul>
+            <li><a href="danh-muc.html?cat=den-pha-nlmt">Đèn pha NLMT</a></li>
+            <li><a href="danh-muc.html?cat=den-duong-nlmt">Đèn đường NLMT</a></li>
+            <li><a href="danh-muc.html?cat=den-san-vuon-nlmt">Đèn sân vườn</a></li>
+            <li><a href="danh-muc.html?cat=phu-kien-lap-dat">Phụ kiện lắp đặt</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Hỗ trợ</h4>
+          <ul>
+            <li><a href="tin-tuc.html">Tin tức &amp; Kiến thức</a></li>
+            <li><a href="khuyen-mai.html">Khuyến mãi</a></li>
+            <li><a href="chinh-sach.html">Chính sách &amp; Quy định</a></li>
+            <li><a href="lien-he.html">Liên hệ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-col--contact">
+          <h4>Liên hệ</h4>
+          <ul class="footer-contact">
+            <li><i class="fa-solid fa-location-dot"></i> 1402, Đại lộ Võ Văn Kiệt, Phường Bình Tiên, TP.HCM</li>
+            <li><i class="fa-solid fa-phone"></i> <a href="tel:0907673277">090 767 32 77</a></li>
+            <li><i class="fa-solid fa-envelope"></i> <a href="mailto:phuyensolar@gmail.com">phuyensolar@gmail.com</a></li>
+            <li><i class="fa-solid fa-clock"></i> 8:00 – 22:00 (T2–CN)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <div class="container site-footer__bottom-inner">
+        <p>&copy; 2026 PHÚ YÊN SOLAR. Bản quyền thuộc về Công ty TNHH Phú Yên Solar Việt Nam.</p>
+        <div class="footer-payments">
+          <i class="fa-brands fa-cc-visa"></i>
+          <i class="fa-brands fa-cc-mastercard"></i>
+          <i class="fa-solid fa-building-columns"></i>
+          <i class="fa-solid fa-wallet"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-contact">
+    <a href="tel:0907673277" class="floating-btn floating-btn--phone" title="Gọi hotline"><i class="fa-solid fa-phone"></i></a>
+    <a href="#" class="floating-btn floating-btn--zalo" title="Zalo"><span>Z</span></a>
+    <a href="#" class="floating-btn floating-btn--messenger" title="Messenger"><i class="fa-brands fa-facebook-messenger"></i></a>
+  </div>
+
+  <script src="../js/products-data.js"></script>
+  <script src="../js/catalog.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/inner-pages.js"></script>
+</body>
+</html>
