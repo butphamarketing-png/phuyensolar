@@ -1432,6 +1432,13 @@ body.is-loading {
   transition: var(--transition);
 }
 
+a.btn-add-cart {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
 .btn-add-cart:hover {
   background: var(--blue-hover);
 }

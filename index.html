@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/catalog.css">
 </head>
 <body class="is-loading">
 
@@ -35,7 +36,7 @@
   <!-- ========== HEADER TOP ========== -->
   <header class="header-top">
     <div class="container header-top__inner">
-      <a href="https://phuyensolar.com" class="logo">
+      <a href="index.html" class="logo">
         <img src="images/logo-icon.png" alt="" class="logo__img" width="56" height="56">
         <div class="logo__text">
           <span class="logo__name">Phú Yên <span class="logo__accent">Solar</span></span>
@@ -85,78 +86,7 @@
         </button>
 
         <aside class="category-sidebar" id="categorySidebar">
-          <ul class="category-list">
-            <li>
-              <a href="#">
-                <i class="fa-solid fa-lightbulb"></i>
-                <span>Đèn pha năng lượng mặt trời</span>
-                <i class="fa-solid fa-chevron-right"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fa-solid fa-road"></i>
-                <span>Đèn đường năng lượng mặt trời</span>
-                <i class="fa-solid fa-chevron-right"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fa-solid fa-seedling"></i>
-                <span>Đèn sân vườn năng lượng mặt trời</span>
-                <i class="fa-solid fa-chevron-right"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fa-solid fa-monument"></i>
-                <span>Đèn trụ năng lượng mặt trời</span>
-                <i class="fa-solid fa-chevron-right"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fa-solid fa-house-chimney"></i>
-                <span>Đèn tường năng lượng mặt trời</span>
-                <i class="fa-solid fa-chevron-right"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fa-solid fa-bolt"></i>
-                <span>Đèn cảm biến năng lượng mặt trời</span>
-                <i class="fa-solid fa-chevron-right"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fa-solid fa-star"></i>
-                <span>Đèn trang trí năng lượng mặt trời</span>
-                <i class="fa-solid fa-chevron-right"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fa-solid fa-industry"></i>
-                <span>Đèn nhà xưởng năng lượng mặt trời</span>
-                <i class="fa-solid fa-chevron-right"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fa-solid fa-battery-full"></i>
-                <span>Pin năng lượng mặt trời</span>
-                <i class="fa-solid fa-chevron-right"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fa-solid fa-screwdriver-wrench"></i>
-                <span>Phụ kiện lắp đặt</span>
-                <i class="fa-solid fa-chevron-right"></i>
-              </a>
-            </li>
-          </ul>
+          <ul class="category-list" id="categoryList"></ul>
         </aside>
       </div>
 
@@ -164,7 +94,7 @@
         <li><a href="#" class="active">Trang chủ</a></li>
         <li><a href="#">Giới thiệu</a></li>
         <li class="has-dropdown">
-          <a href="#">Sản phẩm <i class="fa-solid fa-chevron-down"></i></a>
+          <a href="pages/danh-muc.html?cat=den-pha-nlmt">Sản phẩm <i class="fa-solid fa-chevron-down"></i></a>
         </li>
         <li><a href="#">Dự án</a></li>
         <li><a href="#">Tin tức</a></li>
@@ -489,42 +419,42 @@
         </div>
       </div>
       <div class="category-grid">
-        <a href="#" class="category-card">
+        <a href="pages/danh-muc.html?cat=den-pha-nlmt" class="category-card">
           <div class="category-card__icon"><i class="fa-solid fa-lightbulb"></i></div>
           <span>Đèn pha NLMT</span>
           <small>128 sản phẩm</small>
         </a>
-        <a href="#" class="category-card">
+        <a href="pages/danh-muc.html?cat=den-duong-nlmt" class="category-card">
           <div class="category-card__icon"><i class="fa-solid fa-road"></i></div>
           <span>Đèn đường NLMT</span>
           <small>96 sản phẩm</small>
         </a>
-        <a href="#" class="category-card">
+        <a href="pages/danh-muc.html?cat=den-san-vuon-nlmt" class="category-card">
           <div class="category-card__icon"><i class="fa-solid fa-seedling"></i></div>
           <span>Đèn sân vườn</span>
           <small>74 sản phẩm</small>
         </a>
-        <a href="#" class="category-card">
+        <a href="pages/danh-muc.html?cat=den-tru-nlmt" class="category-card">
           <div class="category-card__icon"><i class="fa-solid fa-monument"></i></div>
           <span>Đèn trụ NLMT</span>
           <small>52 sản phẩm</small>
         </a>
-        <a href="#" class="category-card">
+        <a href="pages/danh-muc.html?cat=den-tuong-nlmt" class="category-card">
           <div class="category-card__icon"><i class="fa-solid fa-house-chimney"></i></div>
           <span>Đèn tường NLMT</span>
           <small>45 sản phẩm</small>
         </a>
-        <a href="#" class="category-card">
+        <a href="pages/danh-muc.html?cat=den-cam-bien-nlmt" class="category-card">
           <div class="category-card__icon"><i class="fa-solid fa-bolt"></i></div>
           <span>Đèn cảm biến</span>
           <small>38 sản phẩm</small>
         </a>
-        <a href="#" class="category-card">
+        <a href="pages/danh-muc.html?cat=den-nha-xuong-nlmt" class="category-card">
           <div class="category-card__icon"><i class="fa-solid fa-industry"></i></div>
           <span>Đèn nhà xưởng</span>
           <small>31 sản phẩm</small>
         </a>
-        <a href="#" class="category-card">
+        <a href="pages/danh-muc.html?cat=pin-nlmt" class="category-card">
           <div class="category-card__icon"><i class="fa-solid fa-battery-full"></i></div>
           <span>Pin NLMT</span>
           <small>24 sản phẩm</small>
@@ -834,10 +764,10 @@
         <div class="footer-col">
           <h4>Sản phẩm</h4>
           <ul>
-            <li><a href="#">Đèn pha NLMT</a></li>
-            <li><a href="#">Đèn đường NLMT</a></li>
-            <li><a href="#">Đèn sân vườn</a></li>
-            <li><a href="#">Phụ kiện lắp đặt</a></li>
+            <li><a href="pages/danh-muc.html?cat=den-pha-nlmt">Đèn pha NLMT</a></li>
+            <li><a href="pages/danh-muc.html?cat=den-duong-nlmt">Đèn đường NLMT</a></li>
+            <li><a href="pages/danh-muc.html?cat=den-san-vuon-nlmt">Đèn sân vườn</a></li>
+            <li><a href="pages/danh-muc.html?cat=phu-kien-lap-dat">Phụ kiện lắp đặt</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -887,6 +817,8 @@
     </a>
   </div>
 
+  <script src="js/products-data.js"></script>
+  <script src="js/catalog.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
