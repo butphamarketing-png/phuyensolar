@@ -14,38 +14,80 @@ function imgPath(src) {
   return src.startsWith('http') ? src : `${getBasePath()}${src}`;
 }
 
+function buildMegaPanelHtml(cat) {
+  const featured = getFeaturedProducts(cat.id, 4);
+  const megaItems = featured.map((p) => `
+    <a href="${productUrl(p.id)}" class="mega-product">
+      <img src="${imgPath(p.image)}" alt="${p.name}">
+      <div class="mega-product__info">
+        <strong>${p.name}</strong>
+        <span class="mega-product__price">${formatPrice(p.price)}</span>
+      </div>
+    </a>
+  `).join('');
+
+  return `
+    <div class="category-mega__head">
+      <strong>${cat.name}</strong>
+      <a href="${categoryUrl(cat.id)}">Xem tất cả ${cat.count} SP <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <div class="category-mega__grid">${megaItems}</div>
+  `;
+}
+
 function renderCategoryMenu(container) {
   if (!container) return;
 
-  container.innerHTML = CATEGORIES.map((cat) => {
-    const featured = getFeaturedProducts(cat.id, 4);
-    const megaItems = featured.map((p) => `
-      <a href="${productUrl(p.id)}" class="mega-product">
-        <img src="${imgPath(p.image)}" alt="${p.name}">
-        <div class="mega-product__info">
-          <strong>${p.name}</strong>
-          <span class="mega-product__price">${formatPrice(p.price)}</span>
-        </div>
+  container.innerHTML = CATEGORIES.map((cat) => `
+    <li class="category-item" data-cat="${cat.id}">
+      <a href="${categoryUrl(cat.id)}">
+        <i class="fa-solid ${cat.icon}"></i>
+        <span>${cat.name}</span>
+        <i class="fa-solid fa-chevron-right"></i>
       </a>
-    `).join('');
+    </li>
+  `).join('');
+}
 
-    return `
-      <li class="category-item" data-cat="${cat.id}">
-        <a href="${categoryUrl(cat.id)}">
-          <i class="fa-solid ${cat.icon}"></i>
-          <span>${cat.name}</span>
-          <i class="fa-solid fa-chevron-right"></i>
-        </a>
-        <div class="category-mega" aria-hidden="true">
-          <div class="category-mega__head">
-            <strong>${cat.name}</strong>
-            <a href="${categoryUrl(cat.id)}">Xem tất cả ${cat.count} SP <i class="fa-solid fa-arrow-right"></i></a>
-          </div>
-          <div class="category-mega__grid">${megaItems}</div>
-        </div>
-      </li>
-    `;
-  }).join('');
+function initCategoryMegaPanel() {
+  const flyout = document.getElementById('categoryFlyout');
+  const panel = document.getElementById('categoryMegaPanel');
+  const items = document.querySelectorAll('.category-item');
+  if (!flyout || !panel || !items.length) return;
+
+  let hideTimer;
+
+  function showPanel(catId) {
+    const cat = CATEGORIES.find((c) => c.id === catId);
+    if (!cat) return;
+    clearTimeout(hideTimer);
+    panel.innerHTML = buildMegaPanelHtml(cat);
+    panel.classList.add('is-visible');
+    panel.setAttribute('aria-hidden', 'false');
+  }
+
+  function hidePanel() {
+    panel.classList.remove('is-visible');
+    panel.setAttribute('aria-hidden', 'true');
+    items.forEach((item) => item.classList.remove('is-active'));
+  }
+
+  function scheduleHide() {
+    clearTimeout(hideTimer);
+    hideTimer = setTimeout(hidePanel, 120);
+  }
+
+  items.forEach((item) => {
+    item.addEventListener('mouseenter', () => {
+      clearTimeout(hideTimer);
+      items.forEach((el) => el.classList.remove('is-active'));
+      item.classList.add('is-active');
+      showPanel(item.dataset.cat);
+    });
+  });
+
+  flyout.addEventListener('mouseleave', scheduleHide);
+  flyout.addEventListener('mouseenter', () => clearTimeout(hideTimer));
 }
 
 function renderProductCard(product, options = {}) {
@@ -209,6 +251,7 @@ function initCatalog() {
   const categoryList = document.getElementById('categoryList');
   if (categoryList) renderCategoryMenu(categoryList);
 
+  initCategoryMegaPanel();
   initNavProductDropdown();
 
   if (document.body.dataset.page === 'category') renderCategoryPage();

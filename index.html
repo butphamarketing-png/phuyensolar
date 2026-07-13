@@ -85,9 +85,12 @@
           <i class="fa-solid fa-chevron-down nav-categories__arrow"></i>
         </button>
 
-        <aside class="category-sidebar" id="categorySidebar">
-          <ul class="category-list" id="categoryList"></ul>
-        </aside>
+        <div class="category-flyout" id="categoryFlyout">
+          <aside class="category-sidebar" id="categorySidebar">
+            <ul class="category-list" id="categoryList"></ul>
+          </aside>
+          <div class="category-mega-panel" id="categoryMegaPanel" aria-hidden="true"></div>
+        </div>
       </div>
 
       <ul class="nav-menu">
@@ -683,7 +686,24 @@
 
       <div class="ready-section__box">
         <div class="ready-promo">
-          <img src="images/ready-promo-banner.png" alt="Khuyến mãi đèn NLMT – Phú Yên Solar" class="ready-promo__full">
+          <div class="ready-promo__visual">
+            <img src="images/projects/project-1.jpg" alt="Biệt thự chiếu sáng bằng đèn NLMT Phú Yên Solar" class="ready-promo__bg">
+            <div class="ready-promo__visual-overlay" aria-hidden="true"></div>
+            <div class="ready-promo__badges">
+              <span class="ready-promo__badge ready-promo__badge--sale"><i class="fa-solid fa-gift"></i> Khuyến mãi</span>
+              <span class="ready-promo__badge ready-promo__badge--flash"><i class="fa-solid fa-bolt"></i> Flash Sale</span>
+            </div>
+            <img src="images/products/pha-300w.png" alt="Đèn pha NLMT Phú Yên Solar 300W" class="ready-promo__product">
+          </div>
+          <div class="ready-promo__content">
+            <span class="ready-promo__label">GIẢI PHÁP NLMT HÀNG ĐẦU</span>
+            <h3 class="ready-promo__title">ĐÈN NLMT <span>CAO CẤP</span></h3>
+            <p class="ready-promo__desc">Tiết kiệm điện – Bền bỉ – Thân thiện môi trường</p>
+            <a href="tel:0907673277" class="ready-promo__cta">
+              NHẬN BÁO GIÁ
+              <span class="ready-promo__cta-icon"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+          </div>
         </div>
 
         <div class="ready-links">
